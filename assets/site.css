@@ -1,0 +1,180 @@
+/* William Heather portfolio - plain CSS, no framework required. */
+html { scroll-behavior:smooth; scroll-padding-top:82px; }
+body { margin:0; background:#F7F3EF; }
+
+#wh-portfolio {
+  --wh-bordeaux:#52050A; --wh-grey:#D7D0C8; --wh-purple:#A846A0;
+  --wh-cyan:#258EA6; --wh-coral:#F87666; --wh-cream:#F7F3EF;
+  --wh-ink:#231B1D;
+  color:var(--wh-ink);background:var(--wh-cream);
+  font-family:Inter,Arial,Helvetica,sans-serif;isolation:isolate;
+  width:100%;line-height:1.45;letter-spacing:normal;
+}
+#wh-portfolio *,#wh-portfolio *::before,#wh-portfolio *::after {box-sizing:border-box}
+#wh-portfolio h1,#wh-portfolio h2,#wh-portfolio h3,#wh-portfolio p {margin:0;padding:0;letter-spacing:normal}
+#wh-portfolio a {color:inherit;text-decoration:none}
+#wh-portfolio button {font:inherit}
+#wh-portfolio .wh-wrap {width:min(1200px,calc(100% - 96px));margin:auto}
+#wh-portfolio .wh-sitebar {background:var(--wh-bordeaux);color:var(--wh-cream)}
+#wh-portfolio .wh-sitebar .wh-wrap {display:flex;align-items:center;justify-content:space-between;min-height:80px;gap:20px}
+#wh-portfolio .wh-mark {font-size:27px;letter-spacing:-.1em;font-weight:850;line-height:1;white-space:nowrap}
+#wh-portfolio .wh-mark small {font-size:10px;font-weight:500;letter-spacing:.08em;margin-left:18px;text-transform:uppercase;vertical-align:middle}
+#wh-portfolio .wh-toplinks {display:flex;gap:36px;align-items:center;font-size:12px;font-weight:600}
+#wh-portfolio .wh-toplinks a {transition:color .2s}
+#wh-portfolio .wh-toplinks a:hover,#wh-portfolio .wh-toplinks a:focus-visible {color:var(--wh-coral)}
+#wh-portfolio .wh-availability {display:flex;align-items:center;gap:8px;color:#F8DBD4;font-size:10px;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+#wh-portfolio .wh-dot {width:7px;height:7px;display:inline-block;background:var(--wh-coral);border-radius:50%}
+#wh-portfolio .wh-hero {padding:106px 0 104px}
+#wh-portfolio .wh-eyebrow {display:flex;align-items:center;gap:12px;font-size:11px;text-transform:uppercase;font-weight:750;letter-spacing:.14em;color:var(--wh-bordeaux)}
+#wh-portfolio .wh-eyebrow:before {content:"";width:25px;height:2px;background:var(--wh-coral)}
+#wh-portfolio .wh-hero-grid {display:grid;grid-template-columns:1.45fr .55fr;gap:72px;align-items:end;margin-top:32px}
+#wh-portfolio .wh-hero h1 {font-size:clamp(52px,6.8vw,103px);line-height:.99;letter-spacing:-.068em;font-weight:800;color:var(--wh-bordeaux);max-width:850px}
+#wh-portfolio .wh-hero h1 em {font-style:normal;color:var(--wh-cyan)}
+#wh-portfolio .wh-hero-aside {max-width:320px;border-left:2px solid var(--wh-coral);padding:4px 0 4px 22px}
+#wh-portfolio .wh-hero-aside p {font-size:16px;line-height:1.7;color:#473B3C}
+#wh-portfolio .wh-text-link {display:inline-flex;align-items:center;gap:12px;margin-top:25px;color:var(--wh-bordeaux)!important;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+#wh-portfolio .wh-text-link .wh-rot {transition:transform .2s}
+#wh-portfolio .wh-text-link:hover .wh-rot {transform:translate(3px,3px)}
+#wh-portfolio .wh-work {background:var(--wh-bordeaux);color:var(--wh-cream);padding:80px 0 95px}
+#wh-portfolio .wh-section-top {display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.26)}
+#wh-portfolio .wh-section-label {text-transform:uppercase;letter-spacing:.16em;font-weight:750;font-size:11px}
+#wh-portfolio .wh-section-count {font-size:11px;color:#D8C1C0;letter-spacing:.1em}
+#wh-portfolio .wh-work-grid {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.06fr);gap:58px;margin-top:44px;align-items:start}
+#wh-portfolio .wh-work-intro {font-size:15px;line-height:1.7;max-width:450px;color:#D8C1C0;margin-bottom:35px}
+#wh-portfolio .wh-project-button {display:grid;grid-template-columns:32px 1fr 26px;gap:10px;align-items:center;width:100%;color:#E5CFCF;background:transparent;border:0;border-top:1px solid rgba(255,255,255,.2);padding:22px 9px 22px 1px;text-align:left;cursor:pointer;position:relative;transition:background .22s,padding .22s,color .22s}
+#wh-portfolio .wh-project-button:last-child {border-bottom:1px solid rgba(255,255,255,.2)}
+#wh-portfolio .wh-project-button:before {content:"";width:3px;position:absolute;left:0;top:15px;bottom:15px;background:var(--wh-coral);opacity:0;transform:scaleY(.2);transition:.22s}
+#wh-portfolio .wh-project-button[data-active="true"] {color:white;background:rgba(255,255,255,.065);padding-left:13px}
+#wh-portfolio .wh-project-button[data-active="true"]:before {opacity:1;transform:scaleY(1)}
+#wh-portfolio .wh-project-button:focus-visible {outline:2px solid var(--wh-coral);outline-offset:3px}
+#wh-portfolio .wh-project-no {font-size:11px;align-self:start;margin-top:8px;color:#BDA7A7;font-weight:650}
+#wh-portfolio .wh-project-title {font-size:clamp(23px,2.6vw,38px);letter-spacing:-.045em;font-weight:750;line-height:1.1;display:block}
+#wh-portfolio .wh-project-meta {font-size:11px;margin-top:9px;color:#C8B3B4;display:block;letter-spacing:.02em}
+#wh-portfolio .wh-project-arrow {font-size:26px;font-weight:300;text-align:right;transition:transform .2s;color:var(--wh-coral)}
+#wh-portfolio .wh-project-button:hover .wh-project-arrow {transform:translate(3px,-3px)}
+#wh-portfolio .wh-stage {min-width:0}
+#wh-portfolio .wh-visual {height:420px;border-radius:6px;overflow:hidden;position:relative;background:#E3D5C8;box-shadow:0 32px 60px rgba(22,0,3,.23)}
+#wh-portfolio .wh-visual-scene {display:none;position:absolute;inset:0;padding:24px;animation:wh-fade .28s ease-out}
+#wh-portfolio .wh-visual-scene[data-visible="true"] {display:flex;align-items:center;justify-content:center}
+@keyframes wh-fade {from{opacity:.45;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+#wh-portfolio .wh-scene-receipt {background:radial-gradient(circle at 92% 10%,#F5C4B6,transparent 45%),#F1DBCF}
+#wh-portfolio .wh-scene-booking {background:linear-gradient(150deg,#CAE7E6 10%,#258EA6 100%)}
+#wh-portfolio .wh-scene-wallet {background:radial-gradient(circle at 80% 25%,#E6A3DF,transparent 45%),linear-gradient(120deg,#6B2C76,#A846A0)}
+#wh-portfolio .wh-scene-knights {background:radial-gradient(circle at 55% 46%,#865E88 0,#39143D 48%,#190E26 100%)}
+#wh-portfolio .wh-app-window {width:100%;max-width:520px;height:296px;border-radius:9px;background:#FFFDFC;box-shadow:0 24px 55px rgba(34,9,15,.22);overflow:hidden;color:#3F3034;font-size:10px}
+#wh-portfolio .wh-app-bar {height:32px;background:#F8F1EF;border-bottom:1px solid #E3DAD6;display:flex;gap:5px;align-items:center;padding:0 14px;font-weight:700}
+#wh-portfolio .wh-pip {width:7px;height:7px;background:#D2C1BE;border-radius:50%}
+#wh-portfolio .wh-app-bar .wh-app-name {margin-left:11px;letter-spacing:.01em;font-size:10px}
+#wh-portfolio .wh-app-main {display:grid;grid-template-columns:112px 1fr;height:264px}
+#wh-portfolio .wh-sidebar {background:#5C1117;color:#FAF0E9;padding:20px 12px}
+#wh-portfolio .wh-sidebar strong {font-size:12px;display:block;margin-bottom:20px}
+#wh-portfolio .wh-sidebar span {display:block;margin-top:14px;opacity:.7;font-size:9px}
+#wh-portfolio .wh-sidebar span:first-of-type {color:#FFF;opacity:1}
+#wh-portfolio .wh-content {padding:23px}
+#wh-portfolio .wh-content h3 {font-size:17px;font-weight:750;color:#52050A}
+#wh-portfolio .wh-mini-row {display:flex;justify-content:space-between;gap:12px;margin-top:17px}
+#wh-portfolio .wh-mini-stat {flex:1;padding:12px;background:#FAF1EF;border-radius:4px}
+#wh-portfolio .wh-mini-stat b {display:block;font-size:17px;color:#52050A;margin-top:5px}
+#wh-portfolio .wh-mini-table {margin-top:19px;background:#FBF9F7;border:1px solid #EFE5DF;border-radius:4px;padding:10px}
+#wh-portfolio .wh-mini-line {height:8px;margin:10px 0;border-radius:4px;background:linear-gradient(90deg,#D6C8BF 34%,transparent 34%,transparent 47%,#E9DEDB 47%,#E9DEDB 80%,transparent 80%)}
+#wh-portfolio .wh-mini-line:nth-child(2) {opacity:.8}
+#wh-portfolio .wh-mini-line:nth-child(3) {opacity:.55}
+#wh-portfolio .wh-booking-card {width:100%;max-width:490px;background:#FDFEFF;border-radius:9px;box-shadow:0 20px 44px #08445B55;overflow:hidden;color:#233B45;font-size:10px;transform:rotate(-2deg)}
+#wh-portfolio .wh-browser-bar {height:31px;background:#E6EDF0;display:flex;gap:6px;align-items:center;padding:0 13px}
+#wh-portfolio .wh-browser-bar .wh-url {background:#FAFBFB;border-radius:4px;padding:5px 15px;margin-left:10px;flex:1;color:#60767D;font-size:9px}
+#wh-portfolio .wh-booking-inner {display:grid;grid-template-columns:1.1fr .9fr;min-height:254px}
+#wh-portfolio .wh-booking-list {padding:18px;background:#F9FAFA}
+#wh-portfolio .wh-booking-inner h3 {font-size:16px;font-weight:750;margin-bottom:18px}
+#wh-portfolio .wh-booking-row {background:white;border:1px solid #DDE6E7;padding:11px 9px;border-radius:4px;margin-bottom:8px;display:flex;justify-content:space-between}
+#wh-portfolio .wh-booking-row.selected {border-color:#258EA6;background:#E8F5F6}
+#wh-portfolio .wh-booking-doc {padding:18px;background:#E7F0EF;display:flex;flex-direction:column;gap:9px}
+#wh-portfolio .wh-doc-page {flex:1;padding:14px 11px;background:white;box-shadow:0 8px 19px #386F7722}
+#wh-portfolio .wh-doc-page b {font-size:13px;color:#52050A}
+#wh-portfolio .wh-doc-field {height:6px;background:#E1E8EA;margin-top:14px;border-radius:2px}
+#wh-portfolio .wh-doc-field:nth-child(2n) {width:72%}
+#wh-portfolio .wh-doc-button {background:#258EA6;color:white;text-align:center;padding:9px;border-radius:4px;font-weight:700}
+#wh-portfolio .wh-phone {height:342px;width:182px;background:#17141C;border:5px solid #241D28;border-radius:29px;padding:7px;box-shadow:0 26px 55px #2D052B99;transform:rotate(6deg);position:relative}
+#wh-portfolio .wh-phone:before {content:"";position:absolute;top:7px;left:60px;width:50px;height:11px;background:#17141C;border-radius:0 0 10px 10px;z-index:2}
+#wh-portfolio .wh-phone-screen {background:#F9F3F9;height:100%;border-radius:21px;padding:28px 13px 13px;color:#391B3C;overflow:hidden}
+#wh-portfolio .wh-phone-screen h3 {font-size:16px;font-weight:760;margin-top:7px}
+#wh-portfolio .wh-phone-kicker {font-size:8px;letter-spacing:.11em;font-weight:700}
+#wh-portfolio .wh-wallet-credential {background:linear-gradient(135deg,#52050A,#A846A0);border-radius:8px;color:white;padding:15px 12px;height:111px;margin-top:19px}
+#wh-portfolio .wh-wallet-credential strong {font-size:11px}
+#wh-portfolio .wh-wallet-chip {border:1px solid #FFFFFF77;border-radius:3px;width:27px;height:18px;margin-top:16px}
+#wh-portfolio .wh-wallet-check {background:#E3F3EE;color:#1C6655;padding:9px 10px;margin-top:13px;border-radius:5px;font-size:9px;font-weight:700}
+#wh-portfolio .wh-wallet-bottom {height:5px;border-radius:4px;background:#D8CDD9;width:80%;margin-top:15px}
+#wh-portfolio .wh-knight-orbit {width:min(300px,85%);aspect-ratio:1;display:grid;place-items:center;border:1px solid #CB84C060;border-radius:50%;position:relative;box-shadow:0 0 0 35px #DD94D010,0 0 0 75px #DD94D00A}
+#wh-portfolio .wh-knight-orbit:before,#wh-portfolio .wh-knight-orbit:after {content:"✦";position:absolute;color:#F87666;font-size:28px;top:8%;left:9%}
+#wh-portfolio .wh-knight-orbit:after {top:auto;left:auto;right:4%;bottom:17%;font-size:17px;color:#77D4E1}
+#wh-portfolio .wh-knight-icon {font-size:142px;color:#EDBDE7;text-shadow:7px 13px 0 #7D347C,0 0 36px #DDA4DE66;line-height:1;transform:rotate(-9deg)}
+#wh-portfolio .wh-knight-label {position:absolute;bottom:3px;color:#E6CBE8;letter-spacing:.3em;text-transform:uppercase;font-size:10px}
+#wh-portfolio .wh-preview-bottom {padding-top:23px;display:flex;gap:22px;justify-content:space-between;align-items:start}
+#wh-portfolio .wh-preview-bottom h3 {font-size:23px;font-weight:700;letter-spacing:-.035em;margin-bottom:8px}
+#wh-portfolio .wh-preview-bottom p {color:#DCC6C6;font-size:12px;line-height:1.7;max-width:380px}
+#wh-portfolio .wh-stack {display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;max-width:175px}
+#wh-portfolio .wh-stack span {color:#E5CED0;font-size:9px;border:1px solid #B7989B88;padding:6px 8px;border-radius:30px;white-space:nowrap}
+#wh-portfolio .wh-note {font-size:10px;color:#BD9DA0;margin-top:22px}
+#wh-portfolio .wh-about {background:var(--wh-cream);padding:95px 0 105px}
+#wh-portfolio .wh-about-header {display:grid;grid-template-columns:1fr 1fr;gap:50px;padding-bottom:38px;border-bottom:1px solid #BCB0A9}
+#wh-portfolio .wh-about-header h2 {font-size:clamp(33px,4vw,56px);line-height:1.1;letter-spacing:-.055em;color:var(--wh-bordeaux);max-width:620px}
+#wh-portfolio .wh-about-header p {font-size:15px;line-height:1.8;max-width:450px;align-self:end}
+#wh-portfolio .wh-pillars {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px;margin-top:43px}
+#wh-portfolio .wh-pillar-no {font-size:11px;color:var(--wh-cyan);font-weight:750}
+#wh-portfolio .wh-pillar h3 {font-size:20px;color:var(--wh-bordeaux);margin:14px 0 10px;font-weight:750;letter-spacing:-.035em}
+#wh-portfolio .wh-pillar p {font-size:13px;color:#5C5252;line-height:1.7}
+#wh-portfolio .wh-footer {background:var(--wh-grey);padding:66px 0 34px}
+#wh-portfolio .wh-footer-top {display:flex;justify-content:space-between;gap:35px;align-items:end}
+#wh-portfolio .wh-footer h2 {font-size:clamp(37px,5vw,68px);letter-spacing:-.06em;line-height:1.07;color:var(--wh-bordeaux);max-width:760px}
+#wh-portfolio .wh-footer p {font-size:12px;max-width:300px;color:#594449;line-height:1.65}
+#wh-portfolio .wh-footer-base {border-top:1px solid #B6A8A1;margin-top:68px;padding-top:22px;font-size:10px;display:flex;justify-content:space-between;color:#594449;gap:20px}
+@media(max-width:950px){
+  #wh-portfolio .wh-wrap{width:min(100% - 50px,900px)}
+  #wh-portfolio .wh-toplinks {gap:16px}
+  #wh-portfolio .wh-availability {display:none}
+  #wh-portfolio .wh-hero-grid{grid-template-columns:1fr;gap:32px}
+  #wh-portfolio .wh-hero h1 {max-width:750px}
+  #wh-portfolio .wh-hero-aside {max-width:550px}
+  #wh-portfolio .wh-work-grid {grid-template-columns:1fr;gap:35px}
+  #wh-portfolio .wh-visual {height:420px}
+  #wh-portfolio .wh-preview-bottom {margin-bottom:20px}
+}
+@media(max-width:600px){
+  #wh-portfolio .wh-wrap{width:calc(100% - 32px)}
+  #wh-portfolio .wh-sitebar .wh-wrap {min-height:66px}
+  #wh-portfolio .wh-mark small {display:none}
+  #wh-portfolio .wh-toplinks {gap:14px;font-size:11px}
+  #wh-portfolio .wh-hero {padding:71px 0 70px}
+  #wh-portfolio .wh-hero h1 {font-size:clamp(46px,11vw,72px)}
+  #wh-portfolio .wh-hero-grid{margin-top:22px}
+  #wh-portfolio .wh-work {padding:55px 0 60px}
+  #wh-portfolio .wh-work-grid{margin-top:28px}
+  #wh-portfolio .wh-work-intro {margin-bottom:15px}
+  #wh-portfolio .wh-project-button {padding:17px 7px 17px 1px}
+  #wh-portfolio .wh-project-title {font-size:26px}
+  #wh-portfolio .wh-visual {height:310px}
+  #wh-portfolio .wh-visual-scene {padding:14px}
+  #wh-portfolio .wh-app-window {transform:scale(.85)}
+  #wh-portfolio .wh-booking-card {transform:rotate(-2deg) scale(.86)}
+  #wh-portfolio .wh-preview-bottom {flex-direction:column;gap:13px}
+  #wh-portfolio .wh-stack{max-width:none;justify-content:flex-start}
+  #wh-portfolio .wh-about {padding:68px 0}
+  #wh-portfolio .wh-about-header {grid-template-columns:1fr;gap:22px}
+  #wh-portfolio .wh-pillars {grid-template-columns:1fr;gap:25px}
+  #wh-portfolio .wh-footer-top {flex-direction:column;align-items:start}
+  #wh-portfolio .wh-footer-base {margin-top:38px}
+}
+@media(prefers-reduced-motion:reduce){
+  #wh-portfolio *,#wh-portfolio *::before,#wh-portfolio *::after {animation:none!important;transition:none!important}
+}
+
+/* GitHub Pages: native website header and case-study pages */
+#wh-portfolio .wh-sitebar {position:sticky;top:0;z-index:30;box-shadow:0 1px 0 rgba(255,255,255,.07)}
+#wh-portfolio .wh-brand-logo {display:block;width:288px;max-width:100%;height:auto}
+#wh-portfolio .wh-mark {display:inline-flex;align-items:center;flex:0 0 auto}
+#wh-portfolio .wh-case-cta {display:inline-flex;align-items:center;gap:10px;color:#F87666!important;border-bottom:1px solid #F87666;padding:0 0 5px;text-transform:uppercase;letter-spacing:.11em;font-size:11px;font-weight:750;margin-top:18px}
+#wh-portfolio .wh-case-cta:hover, #wh-portfolio .wh-case-cta:focus-visible {color:#fff!important;border-color:#fff}
+#wh-portfolio .wh-contact-actions {display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:20px}
+#wh-portfolio .wh-contact-actions a {display:inline-flex;justify-content:center;align-items:center;border:1px solid #52050A;padding:12px 17px;color:#52050A;font-weight:750;letter-spacing:.04em;text-transform:uppercase;font-size:11px;transition:background .2s,color .2s}
+#wh-portfolio .wh-contact-actions a:hover,#wh-portfolio .wh-contact-actions a:focus-visible {background:#52050A;color:#F7F3EF}
+@media(max-width:950px) {#wh-portfolio .wh-brand-logo {width:230px}}
+@media(max-width:600px) {#wh-portfolio .wh-brand-logo {width:42px}#wh-portfolio .wh-sitebar .wh-wrap {gap:10px}}
