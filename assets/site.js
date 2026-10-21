@@ -6,7 +6,7 @@
     {
       title: "ReceiptFlow",
       description:
-        "A desktop application designed to simplify real operational receipt workflows, with data persistence and maintainable interfaces.",
+        "Built for a real club workflow, ReceiptFlow combines guided transaction entry, searchable SQLite records and practical desktop interfaces.",
       stack: ["Python", "SQLite", "PySide6"],
       url: "projects/receiptflow.html",
     },

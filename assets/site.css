@@ -119,6 +119,7 @@ body {
   font-weight: 750;
   letter-spacing: 0.14em;
   color: var(--wh-bordeaux);
+  margin-bottom:15px;
 }
 #wh-portfolio .wh-eyebrow:before {
   content: "";

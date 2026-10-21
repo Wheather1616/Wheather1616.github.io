@@ -6,7 +6,7 @@
   display: block;
   color: #52050a;
   font-weight: 750;
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 48px;
@@ -27,12 +27,12 @@
 }
 #wh-portfolio .case-hero .case-tags {
   display: flex;
-  gap: 9px;
+  gap: 15px;
   flex-wrap: wrap;
   margin-top: 34px;
 }
 #wh-portfolio .case-hero .case-tags span {
-  font-size: 11px;
+  font-size: 13px;
   border: 1px solid #b7a39d;
   color: #52050a;
   padding: 9px 13px;
@@ -50,7 +50,7 @@
   align-items: start;
 }
 #wh-portfolio .case-overline {
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.16em;
   font-weight: 750;
   text-transform: uppercase;
@@ -133,5 +133,165 @@
   }
   #wh-portfolio .case-details {
     padding: 55px 0 80px;
+  }
+}
+
+/* ReceiptFlow case-study additions */
+#wh-portfolio .case-feature-grid > div > p + p {
+  margin-top: 18px;
+}
+
+#wh-portfolio .case-workflow {
+  padding: 85px 0 100px;
+  background: #f7f3ef;
+}
+
+#wh-portfolio .case-workflow .case-overline,
+#wh-portfolio .case-details > .wh-wrap > .case-overline {
+  color: #258ea6;
+}
+
+#wh-portfolio .case-section-heading {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: end;
+  gap: 55px;
+  margin: 20px 0 38px;
+}
+
+#wh-portfolio .case-section-heading h2,
+#wh-portfolio .case-details .case-details-title {
+  color: #52050a;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.12;
+  letter-spacing: -0.05em;
+}
+
+#wh-portfolio .case-section-heading p {
+  color: #564647;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+#wh-portfolio .case-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+#wh-portfolio .case-capability {
+  padding: 30px 30px 35px;
+  border: 1px solid #ded1c9;
+  background: #fffbf7;
+}
+
+#wh-portfolio .case-capability-number {
+  display: block;
+  color: #258ea6;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+}
+
+#wh-portfolio .case-capability h3,
+#wh-portfolio .case-details h3 {
+  color: #52050a;
+  font-size: 24px;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  margin: 15px 0 13px;
+}
+
+#wh-portfolio .case-capability p {
+  color: #4d4142;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+#wh-portfolio .case-proof {
+  background: #d7d0c8;
+  padding: 78px 0 80px;
+}
+
+#wh-portfolio .case-proof-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
+  align-items: center;
+}
+
+#wh-portfolio .case-proof .case-overline {
+  color: #52050a;
+}
+
+#wh-portfolio .case-proof-number {
+  color: #52050a;
+  font-size: clamp(76px, 10vw, 142px);
+  font-weight: 800;
+  letter-spacing: -0.075em;
+  line-height: 1.1;
+  margin-top: 14px;
+}
+
+#wh-portfolio .case-proof-caption {
+  color: #52050a;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+#wh-portfolio .case-proof h2 {
+  color: #52050a;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+  margin-bottom: 20px;
+}
+
+#wh-portfolio .case-proof p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #4d4142;
+}
+
+#wh-portfolio .case-proof .case-proof-footnote {
+  font-size: 11px;
+  margin-top: 15px;
+  opacity: 0.8;
+}
+
+#wh-portfolio .case-details .case-details-title {
+  max-width: 800px;
+  margin-top: 20px;
+  margin-bottom: 36px;
+}
+
+#wh-portfolio .case-details .case-details-grid p + p {
+  margin-top: 14px;
+}
+
+#wh-portfolio .case-details .case-links {
+  margin-top: 36px;
+}
+
+@media (max-width: 750px) {
+  #wh-portfolio .case-section-heading,
+  #wh-portfolio .case-capabilities-grid,
+  #wh-portfolio .case-proof-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #wh-portfolio .case-workflow {
+    padding: 60px 0 70px;
+  }
+
+  #wh-portfolio .case-capability {
+    padding: 25px;
+  }
+
+  #wh-portfolio .case-proof {
+    padding: 60px 0 65px;
   }
 }

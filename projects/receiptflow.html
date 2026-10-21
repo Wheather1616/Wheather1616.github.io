@@ -53,65 +53,178 @@
             </div>
             <h1>ReceiptFlow<span style="color: #258ea6">.</span></h1>
             <p class="case-lead">
-              A desktop application for recording, browsing and managing receipt
-              workflows, designed around the day-to-day needs of real users.
+              From manual receipt processing to a purpose-built desktop
+              application. ReceiptFlow brings transaction entry, searchable
+              records and day-to-day administration into one straightforward
+              tool for any small business.
             </p>
-            <div class="case-tags">
-              <span>Python</span><span>SQLite</span><span>PySide6 / Qt</span
-              ><span>Desktop UI</span>
+            <div class="case-tags" aria-label="Technologies">
+              <span>Python</span><span>PySide6 / Qt</span><span>SQLite</span
+              ><span>CSV / Excel</span><span>Desktop application</span>
             </div>
           </div>
         </section>
-        <section class="case-feature">
+
+        <section class="case-feature" aria-labelledby="case-challenge-title">
           <div class="wh-wrap case-feature-grid">
             <div>
-              <span class="case-overline">The challenge</span>
-              <h2>
-                From repetitive receipt administration to a more structured
-                digital workflow.
+              <span class="case-overline">01 / The problem</span>
+              <h2 id="case-challenge-title">
+                Everyday transactions shouldn't need a complicated workflow.
               </h2>
             </div>
-            <p>
-              The project evolved from a spreadsheet-driven process towards a
-              dedicated application with local data persistence, searchable
-              records and practical interfaces for everyday use.
-            </p>
+            <div>
+              <p>
+                A busy club processes different types of payments, from
+                memberships and replacement cards to functions, merchandise and
+                poppy sales. A spreadsheet-based process left staff navigating
+                manual entry and scattered records when they needed something
+                quick and dependable.
+              </p>
+              <p>
+                I developed ReceiptFlow to turn that process into a dedicated
+                desktop experience: clear choices at the point of entry, one
+                persistent source of transaction data, and a practical way to
+                find information later.
+              </p>
+            </div>
           </div>
         </section>
-        <section class="case-details">
-          <div class="wh-wrap case-details-grid">
+
+        <section class="case-workflow" aria-labelledby="case-workflow-title">
+          <div class="wh-wrap">
+            <span class="case-overline">02 / The application</span>
+            <div class="case-section-heading">
+              <h2 id="case-workflow-title">Designed around the way staff work.</h2>
+              <p>
+                The interface focuses on a few common tasks instead of asking
+                users to navigate a spreadsheet or configure every transaction
+                from scratch.
+              </p>
+            </div>
+            <div class="case-capabilities-grid">
+              <article class="case-capability">
+                <span class="case-capability-number">01 / ENTER</span>
+                <h3>Guided receipt entry</h3>
+                <p>
+                  Category-first selections keep forms manageable. Common
+                  membership and merchandise choices can populate the relevant
+                  price, while function transactions can include an event
+                  reference.
+                </p>
+              </article>
+              <article class="case-capability">
+                <span class="case-capability-number">02 / STORE</span>
+                <h3>Local data persistence</h3>
+                <p>
+                  SQLite provides structured storage for receipt records.
+                  CSV and Excel imports help bring existing transaction data
+                  into the application without relying on multiple spreadsheets.
+                </p>
+              </article>
+              <article class="case-capability">
+                <span class="case-capability-number">03 / FIND</span>
+                <h3>Search, sort and export</h3>
+                <p>
+                  A dedicated Browse view supports searching, sorting and
+                  date-based grouping. Results can be exported to CSV when
+                  records are needed outside the application.
+                </p>
+              </article>
+              <article class="case-capability">
+                <span class="case-capability-number">04 / ADAPT</span>
+                <h3>Settings-driven workflows</h3>
+                <p>
+                  Configurable fields and application settings help keep the
+                  day-to-day interface focused while giving the underlying
+                  workflow room to evolve.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-proof" aria-labelledby="case-proof-title">
+          <div class="wh-wrap case-proof-grid">
             <div>
-              <h2>Engineering focus</h2>
-              <ul>
-                <li>Designing reliable, structured local data storage</li>
-                <li>Building a desktop interface around frequent user tasks</li>
-                <li>
-                  Maintaining and refining software as requirements change
-                </li>
-              </ul>
+              <span class="case-overline">03 / Real-world rollout</span>
+              <div class="case-proof-number" aria-label="455 existing records">455</div>
+              <span class="case-proof-caption">existing receipt records</span>
             </div>
             <div>
-              <h2>Further details</h2>
+              <h2 id="case-proof-title">The upgrade needed to keep the data.</h2>
               <p>
-                The strongest story here is iteration in a real operational
-                environment: how user feedback informed the design, how data
-                migration was handled, and what was changed to make daily use
-                faster.
+                During the move to the updated Windows application, 455
+                historical receipts were successfully loaded from the previous
+                version. That migration was an important part of making the new
+                interface useful from day one, rather than starting staff with
+                an empty system.
               </p>
-              <div class="case-note">
-                Add authentic screenshots, a repository or demonstration link,
-                and specific outcomes before treating this as a finished case
-                study.
+              <p class="case-proof-footnote">
+                Historical record count at the time of the application upgrade,
+                not a measure of ongoing transaction volume.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-details" aria-labelledby="case-engineering-title">
+          <div class="wh-wrap">
+            <span class="case-overline">04 / Behind the build</span>
+            <h2 id="case-engineering-title" class="case-details-title">
+              The engineering decisions mattered as much as the interface.
+            </h2>
+            <div class="case-details-grid">
+              <div>
+                <h3>Technical approach</h3>
+                <ul>
+                  <li>
+                    Built the desktop interface in Python with PySide6 / Qt,
+                    emphasising predictable navigation and fast data entry.
+                  </li>
+                  <li>
+                    Used SQLite for local-first persistence and implemented
+                    database-backed browsing, searching and exports.
+                  </li>
+                  <li>
+                    Kept input handling, application views and data operations
+                    separated to make ongoing changes easier to manage.
+                  </li>
+                  <li>
+                    Worked through the practical challenges of moving an
+                    existing workflow onto an updated Windows application.
+                  </li>
+                </ul>
               </div>
-              <div class="case-links">
-                <a href="../index.html#wh-work">← All projects</a
-                ><a
-                  href="https://github.com/Wheather1616"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub profile ↗</a
-                >
+              <div>
+                <h3>What this project taught me</h3>
+                <p>
+                  The hard part of workplace software isn't just getting a
+                  screen to work. It's understanding what people need to do
+                  repeatedly, reducing unnecessary decisions and preserving
+                  the data they already depend on.
+                </p>
+                <p>
+                  ReceiptFlow gave me experience refining an application in
+                  response to real usage, while balancing interface quality,
+                  maintainable code and a dependable transition between
+                  versions.
+                </p>
+                <div class="case-note">
+                  The project continues to be refined around real staff
+                  workflows, with attention to usable screens, dependable
+                  records and maintainable application logic.
+                </div>
               </div>
+            </div>
+            <div class="case-links">
+              <a href="../index.html#wh-work">← All projects</a>
+              <a
+                href="https://github.com/Wheather1616"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub profile ↗</a
+              >
             </div>
           </div>
         </section>
