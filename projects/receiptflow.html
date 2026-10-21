@@ -65,6 +65,31 @@
           </div>
         </section>
 
+        <section class="case-screenshot-lead" aria-labelledby="case-screenshot-lead-title">
+          <div class="wh-wrap">
+            <div class="case-screenshot-intro">
+              <div>
+                <span class="case-overline">Inside ReceiptFlow</span>
+                <h2 id="case-screenshot-lead-title">An interface built for everyday use.</h2>
+              </div>
+              <p>One clear starting point for recording a receipt, finding a transaction or adjusting the application. The screenshots show the working desktop interface with fictional demonstration data.</p>
+            </div>
+            <figure class="case-screen-figure case-screen-featured">
+              <a class="case-shot-link" href="../assets/receiptflow/dashboard.webp" target="_blank" rel="noopener noreferrer" data-lightbox-title="ReceiptFlow home dashboard" aria-label="Enlarge the ReceiptFlow home dashboard screenshot">
+                <img
+                  src="../assets/receiptflow/dashboard.webp"
+                  alt="ReceiptFlow home dashboard with Quick receipt, Browse transactions, Desktop tab, Settings and activity summary"
+                  width="2047"
+                  height="1286"
+                  decoding="async"
+                />
+                <span class="case-shot-zoom" aria-hidden="true">View full size ↗</span>
+              </a>
+              <figcaption><span>01 / Home dashboard</span><span>Quick access to frequent tasks</span></figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section class="case-feature" aria-labelledby="case-challenge-title">
           <div class="wh-wrap case-feature-grid">
             <div>
@@ -144,10 +169,67 @@
           </div>
         </section>
 
+        <section class="case-gallery" aria-labelledby="case-gallery-title">
+          <div class="wh-wrap">
+            <div class="case-screenshot-intro">
+              <div>
+                <span class="case-overline">03 / Application views</span>
+                <h2 id="case-gallery-title">The details behind a simpler workflow.</h2>
+              </div>
+              <p>From entering new transactions to finding past receipts, the screens were shaped around routine staff tasks. Select any screenshot to inspect the full-resolution view.</p>
+            </div>
+            <div class="case-gallery-grid">
+              <figure class="case-screen-figure case-gallery-wide">
+                <a class="case-shot-link" href="../assets/receiptflow/browse-transactions.webp" target="_blank" rel="noopener noreferrer" data-lightbox-title="Browse transactions" aria-label="Enlarge the transaction browsing screenshot">
+                  <img
+                    src="../assets/receiptflow/browse-transactions.webp"
+                    alt="ReceiptFlow Browse transactions screen with search, sorting, date grouping, edit and delete controls, and example transaction records"
+                    width="2047"
+                    height="1286"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="case-shot-zoom" aria-hidden="true">View full size ↗</span>
+                </a>
+                <figcaption><span>02 / Browse transactions</span><span>Search, sort and manage existing records</span></figcaption>
+              </figure>
+              <figure class="case-screen-figure">
+                <a class="case-shot-link" href="../assets/receiptflow/add-receipt-form.webp" target="_blank" rel="noopener noreferrer" data-lightbox-title="Add a receipt form" aria-label="Enlarge the Add a receipt form screenshot">
+                  <img
+                    src="../assets/receiptflow/add-receipt-form.webp"
+                    alt="ReceiptFlow new receipt form with fields for receipt number, date, category, customer, amount, payment type, member number and notes"
+                    width="1960"
+                    height="1562"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="case-shot-zoom" aria-hidden="true">View full size ↗</span>
+                </a>
+                <figcaption><span>03 / Guided receipt entry</span><span>Structured fields and clear actions</span></figcaption>
+              </figure>
+              <figure class="case-screen-figure">
+                <a class="case-shot-link" href="../assets/receiptflow/quick-receipt-overlay.webp" target="_blank" rel="noopener noreferrer" data-lightbox-title="Quick receipt overlay" aria-label="Enlarge the quick receipt dialogue screenshot">
+                  <img
+                    src="../assets/receiptflow/quick-receipt-overlay.webp"
+                    alt="ReceiptFlow New Receipt dialogue displayed above the main application dashboard with Save and Cancel actions"
+                    width="2047"
+                    height="1284"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="case-shot-zoom" aria-hidden="true">View full size ↗</span>
+                </a>
+                <figcaption><span>04 / In-context entry</span><span>Open a receipt without losing your place</span></figcaption>
+              </figure>
+            </div>
+            <p class="case-gallery-disclaimer">All names, membership numbers, transactions and amounts shown in the screenshots are fictional demonstration data.</p>
+          </div>
+        </section>
+
         <section class="case-proof" aria-labelledby="case-proof-title">
           <div class="wh-wrap case-proof-grid">
             <div>
-              <span class="case-overline">03 / Real-world rollout</span>
+              <span class="case-overline">04 / Real-world rollout</span>
               <div class="case-proof-number" aria-label="455 existing records">455</div>
               <span class="case-proof-caption">existing receipt records</span>
             </div>
@@ -170,7 +252,7 @@
 
         <section class="case-details" aria-labelledby="case-engineering-title">
           <div class="wh-wrap">
-            <span class="case-overline">04 / Behind the build</span>
+            <span class="case-overline">05 / Behind the build</span>
             <h2 id="case-engineering-title" class="case-details-title">
               The engineering decisions mattered as much as the interface.
             </h2>
@@ -228,6 +310,14 @@
             </div>
           </div>
         </section>
+      <dialog class="case-image-dialog" id="case-image-dialog" aria-labelledby="case-dialog-title">
+          <div class="case-dialog-topbar">
+            <p id="case-dialog-title">ReceiptFlow screenshot</p>
+            <button class="case-dialog-close" type="button" aria-label="Close screenshot">Close ✕</button>
+          </div>
+          <img id="case-dialog-image" src="../assets/receiptflow/dashboard.webp" alt="ReceiptFlow application screenshot" width="2047" height="1286" />
+          <p class="case-dialog-caption">Fictional demonstration data · Press Esc to close</p>
+        </dialog>
       </main>
       <footer class="wh-footer" id="wh-contact">
         <div class="wh-wrap">
@@ -256,5 +346,6 @@
         </div>
       </footer>
     </div>
+    <script src="../assets/receiptflow-gallery.js" defer></script>
   </body>
 </html>

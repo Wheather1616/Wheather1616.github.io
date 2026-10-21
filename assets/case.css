@@ -6,7 +6,7 @@
   display: block;
   color: #52050a;
   font-weight: 750;
-  font-size: 13px;
+  font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 48px;
@@ -27,12 +27,12 @@
 }
 #wh-portfolio .case-hero .case-tags {
   display: flex;
-  gap: 15px;
+  gap: 9px;
   flex-wrap: wrap;
   margin-top: 34px;
 }
 #wh-portfolio .case-hero .case-tags span {
-  font-size: 13px;
+  font-size: 11px;
   border: 1px solid #b7a39d;
   color: #52050a;
   padding: 9px 13px;
@@ -50,7 +50,7 @@
   align-items: start;
 }
 #wh-portfolio .case-overline {
-  font-size: 13px;
+  font-size: 11px;
   letter-spacing: 0.16em;
   font-weight: 750;
   text-transform: uppercase;
@@ -293,5 +293,218 @@
 
   #wh-portfolio .case-proof {
     padding: 60px 0 65px;
+  }
+}
+
+/* ReceiptFlow: screenshot presentation and accessible enlargement dialogue. */
+#wh-portfolio .case-screenshot-lead {
+  background: #e8dfd8;
+  padding: 76px 0 84px;
+}
+
+#wh-portfolio .case-gallery {
+  background: #fbf8f5;
+  padding: 88px 0 94px;
+}
+
+#wh-portfolio .case-screenshot-intro {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: end;
+  margin-bottom: 34px;
+}
+
+#wh-portfolio .case-screenshot-intro .case-overline {
+  color: #258ea6;
+}
+
+#wh-portfolio .case-screenshot-intro h2 {
+  color: #52050a;
+  font-size: clamp(31px, 4vw, 50px);
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+  margin-top: 17px;
+}
+
+#wh-portfolio .case-screenshot-intro p {
+  max-width: 440px;
+  color: #564647;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+#wh-portfolio .case-screen-figure {
+  margin: 0;
+  background: #fffdfb;
+  min-width: 0;
+  border: 1px solid #dbcec7;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 22px 40px rgba(63, 24, 27, 0.09);
+}
+
+#wh-portfolio .case-shot-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: #e7dfd9;
+  cursor: zoom-in;
+}
+
+#wh-portfolio .case-shot-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s ease;
+}
+
+#wh-portfolio .case-shot-link:hover img {
+  transform: scale(1.012);
+}
+
+#wh-portfolio .case-shot-link:focus-visible {
+  outline: 3px solid #258ea6;
+  outline-offset: -3px;
+}
+
+#wh-portfolio .case-shot-zoom {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background: #52050a;
+  color: #fff7f0;
+  border-radius: 30px;
+  padding: 9px 13px;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 16px rgba(30, 0, 3, 0.2);
+}
+
+#wh-portfolio .case-screen-figure figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px 16px;
+  padding: 17px 20px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #625354;
+}
+
+#wh-portfolio .case-screen-figure figcaption span:first-child {
+  color: #52050a;
+  font-weight: 800;
+}
+
+#wh-portfolio .case-gallery-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 22px;
+}
+
+#wh-portfolio .case-gallery-wide {
+  grid-column: 1 / -1;
+}
+
+#wh-portfolio .case-gallery-disclaimer {
+  margin-top: 22px;
+  color: #65585a;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+#wh-portfolio .case-image-dialog {
+  position: fixed;
+  width: min(96vw, 1500px);
+  max-width: min(96vw, 1500px);
+  max-height: 94dvh;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #b39e98;
+  border-radius: 10px;
+  overflow: auto;
+  background: #f7f3ef;
+  color: #52050a;
+  box-shadow: 0 35px 100px rgba(0, 0, 0, 0.45);
+}
+
+#wh-portfolio .case-image-dialog::backdrop {
+  background: rgba(21, 11, 15, 0.83);
+}
+
+#wh-portfolio .case-dialog-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 20px;
+  gap: 18px;
+}
+
+#wh-portfolio .case-dialog-topbar p {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+#wh-portfolio .case-dialog-close {
+  padding: 8px 12px;
+  border: 1px solid #bda19d;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #fff;
+  color: #52050a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#wh-portfolio .case-image-dialog img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  max-height: calc(94dvh - 100px);
+  object-fit: contain;
+  background: white;
+}
+
+#wh-portfolio .case-dialog-caption {
+  padding: 11px 20px 14px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #65585a;
+}
+
+@media (max-width: 750px) {
+  #wh-portfolio .case-screenshot-intro,
+  #wh-portfolio .case-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 21px;
+  }
+
+  #wh-portfolio .case-gallery-wide {
+    grid-column: auto;
+  }
+
+  #wh-portfolio .case-screenshot-lead,
+  #wh-portfolio .case-gallery {
+    padding: 55px 0 64px;
+  }
+
+  #wh-portfolio .case-screen-figure figcaption {
+    padding: 13px 15px;
+  }
+
+  #wh-portfolio .case-shot-zoom {
+    bottom: 8px;
+    right: 8px;
+    padding: 7px 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #wh-portfolio .case-shot-link img {
+    transition: none;
   }
 }
