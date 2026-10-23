@@ -559,3 +559,139 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Digital Identity Wallet case-study components */
+#wh-portfolio .wallet-hero .case-lead { max-width: 940px; }
+#wh-portfolio .wallet-context {
+  margin-top: 28px;
+  color: #6b5354;
+  font-size: 13px;
+  line-height: 1.9;
+}
+#wh-portfolio .wallet-context strong { color: #52050a; }
+#wh-portfolio .wallet-screen-lead { background: #e9e1dc; }
+#wh-portfolio .wallet-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  padding: 28px;
+  background: linear-gradient(135deg, #281728, #40327d 52%, #2b69bc);
+  border-radius: 12px;
+}
+#wh-portfolio .wallet-showcase-card {
+  margin: 0;
+  min-width: 0;
+  text-align: center;
+}
+#wh-portfolio .wallet-showcase-card .case-shot-link {
+  width: min(100%, 240px);
+  height: auto;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 12px;
+}
+#wh-portfolio .wallet-showcase-card .case-shot-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 19px 34px rgba(13, 5, 29, .38);
+}
+#wh-portfolio .wallet-showcase-card figcaption {
+  margin: 20px 0 2px;
+  color: #f4e8f0;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+#wh-portfolio .wallet-pipeline li { background: #ede8e3; }
+#wh-portfolio .wallet-architecture-section { background: #f0e9e4; padding: 85px 0 95px; }
+#wh-portfolio .wallet-architecture-section .case-overline { color: #258ea6; }
+#wh-portfolio .wallet-architecture {
+  max-width: 1020px;
+  margin: auto;
+  background: #fffdfb;
+  padding: clamp(20px, 4vw, 52px);
+  border: 1px solid #dbcec7;
+  box-shadow: 0 20px 55px rgba(40, 20, 20, .07);
+}
+#wh-portfolio .wallet-architecture-top,
+#wh-portfolio .wallet-arch-services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+#wh-portfolio .wallet-arch-external,
+#wh-portfolio .wallet-arch-layer,
+#wh-portfolio .wallet-arch-services > div {
+  padding: 23px 25px;
+  min-width: 0;
+  border: 1px solid #d9c6c4;
+  background: #f7f3ef;
+  border-radius: 7px;
+}
+#wh-portfolio .wallet-arch-external { border-top: 4px solid #f87666; }
+#wh-portfolio .wallet-arch-layer { text-align: center; }
+#wh-portfolio .wallet-arch-app { background: #2a2470; border-color: #2a2470; color: white; }
+#wh-portfolio .wallet-arch-api { background: #52050a; border-color: #52050a; color: white; }
+#wh-portfolio .wallet-arch-services > div { background: #e8f2f2; border-top: 4px solid #258ea6; }
+#wh-portfolio .wallet-architecture span,
+#wh-portfolio .wallet-architecture strong,
+#wh-portfolio .wallet-architecture small { display: block; }
+#wh-portfolio .wallet-architecture span { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .11em; opacity: .8; }
+#wh-portfolio .wallet-architecture strong { font-size: clamp(17px, 2.3vw, 24px); margin: 10px 0 6px; }
+#wh-portfolio .wallet-architecture small { font-size: 12px; line-height: 1.65; }
+#wh-portfolio .wallet-arch-exchange,
+#wh-portfolio .wallet-arch-down { margin: 15px 0; text-align: center; color: #65505b; font-size: 12px; font-weight: 700; letter-spacing: .025em; }
+#wh-portfolio .wallet-arch-exchange span { display: inline; font-size: 18px; margin-left: 7px; }
+#wh-portfolio .wallet-arch-footer { font-size: 12px; line-height: 1.7; color: #5c5053; margin-top: 22px; }
+#wh-portfolio .wallet-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+#wh-portfolio .wallet-gallery-grid .case-shot-link { background: linear-gradient(145deg,#dcd8e7,#eff3fc); padding: 20px; }
+#wh-portfolio .wallet-gallery-grid .case-shot-link img {
+  width: auto;
+  height: 330px;
+  max-width: 100%;
+  margin: auto;
+  object-fit: contain;
+  border-radius: 7px;
+  box-shadow: 0 8px 22px rgba(26, 21, 81, .12);
+}
+#wh-portfolio .wallet-gallery-grid .case-screen-figure figcaption { display: block; min-height: 75px; }
+#wh-portfolio .wallet-gallery-grid .case-screen-figure figcaption span { display: block; }
+#wh-portfolio .wallet-gallery-grid .case-screen-figure figcaption span + span { margin-top: 4px; }
+#wh-portfolio .wallet-handover {
+  margin-top: 48px;
+  padding: 28px 30px;
+  border-left: 4px solid #258ea6;
+  background: #f0ebe5;
+  max-width: 950px;
+}
+#wh-portfolio .wallet-handover .case-overline { color: #258ea6; }
+#wh-portfolio .wallet-handover h3 { margin: 13px 0; }
+@media (max-width: 850px) {
+  #wh-portfolio .wallet-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  #wh-portfolio .wallet-context { line-height: 1.9; }
+  #wh-portfolio .wallet-showcase { gap: 8px; padding: 12px 8px; }
+  #wh-portfolio .wallet-showcase-card .case-shot-link img { max-height: 270px; }
+  #wh-portfolio .wallet-showcase-card figcaption { font-size: 9px; margin-top: 12px; }
+  #wh-portfolio .wallet-showcase-card .case-shot-zoom { display: none; }
+  #wh-portfolio .wallet-architecture-section { padding: 60px 0; }
+  #wh-portfolio .wallet-architecture-top,
+  #wh-portfolio .wallet-arch-services { gap: 9px; }
+  #wh-portfolio .wallet-arch-external,
+  #wh-portfolio .wallet-arch-layer,
+  #wh-portfolio .wallet-arch-services > div { padding: 13px; }
+  #wh-portfolio .wallet-architecture strong { font-size: 16px; }
+  #wh-portfolio .wallet-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  #wh-portfolio .wallet-gallery-grid .case-shot-link { padding: 9px; }
+  #wh-portfolio .wallet-gallery-grid .case-shot-link img { height: 220px; }
+  #wh-portfolio .wallet-gallery-grid .case-shot-zoom { display: none; }
+  #wh-portfolio .wallet-gallery-grid .case-screen-figure figcaption { min-height: 85px; }
+  #wh-portfolio .wallet-handover { padding: 20px; }
+}

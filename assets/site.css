@@ -1005,3 +1005,35 @@ body {
   border-radius: 8px;
   box-shadow: 0 22px 48px rgba(11, 46, 53, 0.22);
 }
+
+
+/* Digital Identity Wallet: authentic mobile preview in the project selector. */
+#wh-portfolio .wh-wallet-previews {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 425px);
+  height: 100%;
+}
+#wh-portfolio .wh-wallet-previews img {
+  display: block;
+  height: min(350px, 91%);
+  width: auto;
+  max-width: 52%;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 22px 45px rgba(29, 0, 34, 0.32);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+#wh-portfolio .wh-wallet-preview-primary {
+  position: relative;
+  z-index: 2;
+  transform: translateX(-7%);
+}
+#wh-portfolio .wh-wallet-preview-secondary {
+  transform: translateX(7%) rotate(-5deg) scale(0.92);
+}
+@media (max-width: 600px) {
+  #wh-portfolio .wh-wallet-previews img { height: min(268px, 90%); }
+}
