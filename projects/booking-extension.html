@@ -6,7 +6,7 @@
     <title>Booking Extension | William Heather</title>
     <meta
       name="description"
-      content="A Chrome extension that takes booking information from an existing system and helps produce consistent, usable Word documents."
+      content="A Chrome extension that turns live hospitality bookings into configurable, print-ready signs and Word documents, without re-entering reservation details."
     />
     <meta name="theme-color" content="#52050A" />
     <link rel="icon" type="image/png" href="../assets/favicon.png" />
@@ -43,82 +43,122 @@
         </div>
       </header>
       <main>
-        <section class="case-hero">
-          <div class="wh-wrap">
-            <a href="../index.html#wh-work" class="case-breadcrumb"
-              >← Back to selected work</a
-            >
-            <div class="wh-eyebrow">
-              Browser extension · Workflow automation
-            </div>
-            <h1>Booking Extension<span style="color: #258ea6">.</span></h1>
-            <p class="case-lead">
-              A Chrome extension that takes booking information from an existing
-              system and helps produce consistent, usable Word documents.
-            </p>
-            <div class="case-tags">
-              <span>JavaScript</span><span>Chrome Extension</span
-              ><span>Document generation</span><span>DOM integration</span>
-            </div>
-          </div>
-        </section>
-        <section class="case-feature">
-          <div class="wh-wrap case-feature-grid">
-            <div>
-              <span class="case-overline">The challenge</span>
-              <h2>Making booking information easier to work with.</h2>
-            </div>
-            <p>
-              Rather than duplicating booking details manually, the extension
-              extracts relevant information from the existing browser workflow
-              and assembles it into document templates.
-            </p>
-          </div>
-        </section>
-        <section class="case-details">
-          <div class="wh-wrap case-details-grid">
-            <div>
-              <h2>Engineering focus</h2>
-              <ul>
-                <li>
-                  Extracting and normalising data from changing browser layouts
-                </li>
-                <li>
-                  Building template-driven document generation with configurable
-                  fields
-                </li>
-                <li>
-                  Supporting multiple bookings and layouts while keeping outputs
-                  readable
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2>Further details</h2>
-              <p>
-                The project is a useful example of integrating with an existing
-                system: DOM changes, document layout constraints and the
-                practical needs of non-technical staff all shape implementation
-                decisions.
-              </p>
-              <div class="case-note">
-                Add authentic screenshots, a repository or demonstration link,
-                and specific outcomes before treating this as a finished case
-                study.
-              </div>
-              <div class="case-links">
-                <a href="../index.html#wh-work">← All projects</a
-                ><a
-                  href="https://github.com/Wheather1616"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub profile ↗</a
-                >
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+  <section class="case-hero">
+    <div class="wh-wrap">
+      <a href="../index.html#wh-work" class="case-breadcrumb">← Back to selected work</a>
+      <div class="wh-eyebrow">Browser extension · JavaScript · Workflow automation</div>
+      <h1>Booking Extension<span style="color: #258ea6">.</span></h1>
+      <p class="case-lead">Turning live reservations into print-ready booking signs, without copying the same details twice. A Chrome extension built around the day-to-day needs of a busy hospitality venue.</p>
+      <div class="case-tags" aria-label="Technologies and capabilities">
+        <span>JavaScript</span><span>Chrome Extension</span><span>DOM integration</span><span>Word templates</span><span>Excel mapping</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-screenshot-lead" aria-labelledby="booking-intro-title">
+    <div class="wh-wrap">
+      <div class="case-screenshot-intro">
+        <div><span class="case-overline">Inside the extension</span><h2 id="booking-intro-title">An extra capability, right where staff need it.</h2></div>
+        <p>The extension sits alongside the booking platform, presenting extracted reservations as structured cards with printing and Word-document actions. No separate data-entry screen is needed.</p>
+      </div>
+      <figure class="case-screen-figure case-screen-featured">
+        <a class="case-shot-link" href="../assets/booking/booking-overview.webp" target="_blank" rel="noopener noreferrer" data-lightbox-title="Extension alongside the booking system" aria-label="Enlarge the booking extension in context screenshot">
+          <img src="../assets/booking/booking-overview.webp" alt="Booking Sign Generator Chrome extension open alongside the venue's booking timeline" width="2048" height="1238" decoding="async" fetchpriority="high" />
+          <span class="case-shot-zoom" aria-hidden="true">View full size ↗</span>
+        </a>
+        <figcaption><span>01 / Integrated booking view</span><span>Reservation data and output tools together</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="case-feature" aria-labelledby="booking-problem-title">
+    <div class="wh-wrap case-feature-grid">
+      <div><span class="case-overline">01 / The problem</span><h2 id="booking-problem-title">Booking data existed. Preparing signs was still manual.</h2></div>
+      <div>
+        <p>The booking system already held the details staff needed: names, times, party sizes, tables and notes. Creating signage required those details to be transferred into a separate document workflow, introducing repeated work and opportunities for mistakes.</p>
+        <p>I built a browser extension to connect these workflows. Instead of replacing the booking system, it reads the information already on screen, organises it and turns it into reusable, configurable outputs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-workflow" aria-labelledby="booking-workflow-title">
+    <div class="wh-wrap">
+      <span class="case-overline">02 / How it works</span>
+      <div class="case-section-heading">
+        <h2 id="booking-workflow-title">From booking data to finished document.</h2>
+        <p>The interface keeps common actions immediate while allowing staff to adapt templates, display fields and venue-specific mappings.</p>
+      </div>
+      <ol class="booking-pipeline" aria-label="Booking processing workflow">
+        <li><span>01 / EXTRACT</span><strong>Read bookings</strong><p>Capture relevant details from the existing booking interface.</p></li>
+        <li><span>02 / NORMALISE</span><strong>Structure records</strong><p>Bring fields and booking statuses into a consistent format.</p></li>
+        <li><span>03 / CONFIGURE</span><strong>Apply venue rules</strong><p>Resolve tables, layouts, selected fields and area logos.</p></li>
+        <li><span>04 / GENERATE</span><strong>Prepare output</strong><p>Produce Word signage or a selected print batch.</p></li>
+      </ol>
+      <div class="case-capabilities-grid booking-capabilities">
+        <article class="case-capability"><span class="case-capability-number">01 / FLEXIBLE DATA</span><h3>Selectable booking attributes</h3><p>Choose which extracted details appear on booking cards and flow into output templates, so the interface stays relevant to the task.</p></article>
+        <article class="case-capability"><span class="case-capability-number">02 / VENUE MAPPING</span><h3>Editable table references</h3><p>Download an Excel mapping template, update venue sections and upload the revised mapping to match real floor plans.</p></article>
+        <article class="case-capability"><span class="case-capability-number">03 / SMART TEMPLATES</span><h3>Multiple sign formats</h3><p>Switch between document layouts, including a DL format that supports multiple bookings on one printable template.</p></article>
+        <article class="case-capability"><span class="case-capability-number">04 / LOCATION AWARENESS</span><h3>Area-specific logos</h3><p>Assign different logos to booking areas and retain a fallback when no specific area matches, keeping signage consistent across venues.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-gallery" aria-labelledby="booking-gallery-title">
+    <div class="wh-wrap">
+      <div class="case-screenshot-intro">
+        <div><span class="case-overline">03 / Application views</span><h2 id="booking-gallery-title">The configuration behind the simplicity.</h2></div>
+        <p>These are screenshots of the working extension, not concept illustrations. Open any image for a closer look at the controls.</p>
+      </div>
+      <div class="case-gallery-grid booking-gallery-grid">
+        <figure class="case-screen-figure">
+          <a class="case-shot-link" href="../assets/booking/booking-attributes.webp" data-lightbox-title="Configurable booking attributes" aria-label="Enlarge the booking attributes screenshot" target="_blank" rel="noopener noreferrer"><img src="../assets/booking/booking-attributes.webp" alt="Settings panel with selectable booking attributes including name, start and end time, party size, company and table" width="1530" height="1212" loading="lazy" decoding="async" /><span class="case-shot-zoom" aria-hidden="true">View full size ↗</span></a>
+          <figcaption><span>02 / Field configuration</span><span>Select only what matters</span></figcaption>
+        </figure>
+        <figure class="case-screen-figure">
+          <a class="case-shot-link" href="../assets/booking/table-mapping-templates.webp" data-lightbox-title="Table mapping and document templates" aria-label="Enlarge the table mapping and template screenshot" target="_blank" rel="noopener noreferrer"><img src="../assets/booking/table-mapping-templates.webp" alt="Settings for downloading, uploading and resetting Excel table mappings and selecting print templates" width="1514" height="1198" loading="lazy" decoding="async" /><span class="case-shot-zoom" aria-hidden="true">View full size ↗</span></a>
+          <figcaption><span>03 / Mappings and templates</span><span>Adapt output to the venue</span></figcaption>
+        </figure>
+        <figure class="case-screen-figure">
+          <a class="case-shot-link" href="../assets/booking/logo-configuration.webp" data-lightbox-title="Area-based logo assignment" aria-label="Enlarge the logo configuration screenshot" target="_blank" rel="noopener noreferrer"><img src="../assets/booking/logo-configuration.webp" alt="Logo configuration panel assigning uploaded logos to booking areas with a fallback logo option" width="1526" height="1112" loading="lazy" decoding="async" /><span class="case-shot-zoom" aria-hidden="true">View full size ↗</span></a>
+          <figcaption><span>04 / Automatic logo routing</span><span>Match each sign to its area</span></figcaption>
+        </figure>
+        <figure class="case-screen-figure">
+          <a class="case-shot-link" href="../assets/booking/print-lot.webp" data-lightbox-title="Batch print confirmation" aria-label="Enlarge the batch printing screenshot" target="_blank" rel="noopener noreferrer"><img src="../assets/booking/print-lot.webp" alt="Batch printing confirmation dialogue with selected bookings, print copy counts and a confirm button" width="1514" height="1190" loading="lazy" decoding="async" /><span class="case-shot-zoom" aria-hidden="true">View full size ↗</span></a>
+          <figcaption><span>05 / Batch printing</span><span>Review and adjust copies first</span></figcaption>
+        </figure>
+      </div>
+      <p class="case-gallery-disclaimer">Customer identifiers and booking notes have been obscured in these portfolio images. The original screenshots are unchanged.</p>
+    </div>
+  </section>
+
+  <section class="case-details" aria-labelledby="booking-engineering-title">
+    <div class="wh-wrap">
+      <span class="case-overline">04 / Behind the build</span>
+      <h2 class="case-details-title" id="booking-engineering-title">Integrating with an interface I didn't control.</h2>
+      <div class="case-details-grid">
+        <div><h3>Engineering decisions</h3>
+          <ul>
+            <li>Designed JavaScript extraction logic around an evolving browser DOM, accounting for changes in booking layouts and status presentation.</li>
+            <li>Separated data extraction, normalisation, configuration and document-generation concerns as the extension grew.</li>
+            <li>Used template-driven Word generation, including multi-booking output and layout-specific placeholders.</li>
+            <li>Built configurable Excel-backed table mapping and area-specific logo selection into the document workflow.</li>
+          </ul>
+        </div>
+        <div><h3>What I learnt</h3>
+          <p>Integrating with third-party software is a different engineering challenge from building a standalone application. Changes in the host interface affect extraction, and a small document-formatting detail can affect a physical print workflow.</p>
+          <p>This project made reliability, user-centred configuration and incremental testing central to how I develop tools around real operations.</p>
+          <div class="case-note">The extension was built to support existing staff workflows. This portfolio page shows its functionality, not an official integration or endorsement by the booking-platform provider.</div>
+        </div>
+      </div>
+      <div class="case-links"><a href="../index.html#wh-work">← All projects</a><a href="https://github.com/Wheather1616" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a></div>
+    </div>
+  </section>
+  <dialog class="case-image-dialog" id="case-image-dialog" aria-labelledby="case-dialog-title">
+    <div class="case-dialog-topbar"><p id="case-dialog-title">Booking extension screenshot</p><button class="case-dialog-close" type="button" aria-label="Close screenshot">Close ✕</button></div>
+    <img id="case-dialog-image" src="../assets/booking/booking-overview.webp" alt="Booking extension application screenshot" width="2048" height="1238" />
+    <p class="case-dialog-caption">Identifiers and booking notes obscured for portfolio display · Press Esc to close</p>
+  </dialog>
+</main>
       <footer class="wh-footer" id="wh-contact">
         <div class="wh-wrap">
           <div class="wh-footer-top">
@@ -146,5 +186,6 @@
         </div>
       </footer>
     </div>
+    <script src="../assets/booking-gallery.js" defer></script>
   </body>
 </html>

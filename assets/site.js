@@ -13,15 +13,15 @@
     {
       title: "Booking Extension",
       description:
-        "A browser-based tool that streamlines booking workflows and transforms reservation data into usable documents.",
-      stack: ["JavaScript", "Chrome Extension", "Docs"],
+        "Built for a busy hospitality workflow, this Chrome extension extracts reservations and turns them into configurable, print-ready signs and Word documents.",
+      stack: ["JavaScript", "Chrome Extension", "Word templates"],
       url: "projects/booking-extension.html",
     },
     {
-      title: "Digital Wallet",
+      title: "Digital Identity Wallet",
       description:
-        "A capstone mobile project exploring digital credentials, mobile interactions and backend services.",
-      stack: ["React Native", "FastAPI", "Mobile"],
+        "An industry capstone exploring how organisations can issue and verify digital credentials while holders control what they share. Built with React Native, FastAPI and Walt.id.",
+      stack: ["React Native", "FastAPI", "Walt.id", "W3C VC"],
       url: "projects/digital-wallet.html",
     },
     {

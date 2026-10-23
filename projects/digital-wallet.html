@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Digital Wallet | William Heather</title>
+    <title>Digital Identity Wallet | William Heather</title>
     <meta
       name="description"
-      content="A mobile digital-wallet capstone exploring credential workflows through a React Native front end and Python backend."
+      content="A client-facing UNSW capstone exploring verifiable credentials, selective disclosure and identity verification, built using React Native, FastAPI and Walt.id."
     />
     <meta name="theme-color" content="#52050A" />
     <link rel="icon" type="image/png" href="../assets/favicon.png" />
@@ -43,77 +43,163 @@
         </div>
       </header>
       <main>
-        <section class="case-hero">
+        <section class="case-hero wallet-hero" aria-labelledby="wallet-title">
           <div class="wh-wrap">
-            <a href="../index.html#wh-work" class="case-breadcrumb"
-              >← Back to selected work</a
-            >
-            <div class="wh-eyebrow">University capstone · Mobile and API</div>
-            <h1>Digital Wallet<span style="color: #258ea6">.</span></h1>
-            <p class="case-lead">
-              A mobile digital-wallet capstone exploring credential workflows
-              through a React Native front end and Python backend.
-            </p>
-            <div class="case-tags">
-              <span>React Native</span><span>Expo</span><span>FastAPI</span
-              ><span>Python</span>
+            <a class="case-breadcrumb" href="../index.html#wh-work">← Back to selected work</a>
+            <div class="wh-eyebrow">UNSW COMP3900 · Industry capstone · 2026</div>
+            <h1 id="wallet-title">Digital Identity<br />Wallet<span style="color: #258ea6">.</span></h1>
+            <p class="case-lead">A mobile wallet for receiving, managing and presenting verifiable credentials, designed around a deceptively difficult question: how can people prove something about themselves or their business without sharing everything?</p>
+            <div class="case-tags" aria-label="Technologies and standards">
+              <span>React Native / Expo</span><span>Python / FastAPI</span><span>Walt.id</span><span>PostgreSQL</span><span>Docker</span><span>W3C Verifiable Credentials</span>
             </div>
+            <p class="wallet-context"><strong>Industry client:</strong> Verified Orchestration <span aria-hidden="true">·</span> <strong>Team:</strong> 6 developers <span aria-hidden="true">·</span> <strong>My role:</strong> Scrum Master</p>
           </div>
         </section>
-        <section class="case-feature">
+
+        <section class="case-screenshot-lead wallet-screen-lead" aria-labelledby="wallet-product-title">
+          <div class="wh-wrap">
+            <div class="case-screenshot-intro">
+              <div><span class="case-overline">Inside the mobile wallet</span><h2 id="wallet-product-title">Digital identity, made tangible.</h2></div>
+              <p>These are screens from our working capstone prototype, not visual concepts. The experience covers credential receipt, selective presentation and clear status feedback.</p>
+            </div>
+            <div class="wallet-showcase" aria-label="Three authentic wallet application screenshots">
+              <figure class="wallet-showcase-card">
+                <a class="case-shot-link" href="../assets/mobile-wallet/wallet-home.webp" data-lightbox-title="Wallet home and credential overview" target="_blank" rel="noopener noreferrer"><img src="../assets/mobile-wallet/wallet-home.webp" alt="Wallet home screen with Add and Present buttons, and a Director ID credential card" width="365" height="790" decoding="async" fetchpriority="high"/><span class="case-shot-zoom" aria-hidden="true">Expand ↗</span></a>
+                <figcaption>01 / Manage</figcaption>
+              </figure>
+              <figure class="wallet-showcase-card">
+                <a class="case-shot-link" href="../assets/mobile-wallet/credential-selection.webp" data-lightbox-title="Selecting matching credentials" target="_blank" rel="noopener noreferrer"><img src="../assets/mobile-wallet/credential-selection.webp" alt="Wallet listing matching Director ID and UBO Attestation credentials for a presentation request" width="362" height="782" decoding="async"/><span class="case-shot-zoom" aria-hidden="true">Expand ↗</span></a>
+                <figcaption>02 / Select</figcaption>
+              </figure>
+              <figure class="wallet-showcase-card">
+                <a class="case-shot-link" href="../assets/mobile-wallet/selective-disclosure.webp" data-lightbox-title="Choosing claims to disclose" target="_blank" rel="noopener noreferrer"><img src="../assets/mobile-wallet/selective-disclosure.webp" alt="Selective disclosure screen with independently controlled DOB, appointment date and jurisdiction fields" width="371" height="804" decoding="async"/><span class="case-shot-zoom" aria-hidden="true">Expand ↗</span></a>
+                <figcaption>03 / Disclose</figcaption>
+              </figure>
+            </div>
+            <p class="case-gallery-disclaimer">Screenshots are extracted from our final COMP3900 report and show illustrative test credentials, not real identity records.</p>
+          </div>
+        </section>
+
+        <section class="case-feature" aria-labelledby="wallet-problem-title">
           <div class="wh-wrap case-feature-grid">
+            <div><span class="case-overline">01 / The problem</span><h2 id="wallet-problem-title">Proof of identity should not mean handing over every detail.</h2></div>
             <div>
-              <span class="case-overline">The challenge</span>
-              <h2>
-                Exploring credential interactions across the mobile and backend
-                stack.
-              </h2>
-            </div>
-            <p>
-              This capstone brought together mobile user interfaces and
-              API-backed application logic, with an emphasis on designing the
-              flow between credentials, users and backend services.
-            </p>
-          </div>
-        </section>
-        <section class="case-details">
-          <div class="wh-wrap case-details-grid">
-            <div>
-              <h2>Engineering focus</h2>
-              <ul>
-                <li>Designing mobile screens and user journeys</li>
-                <li>Connecting a mobile client to backend API endpoints</li>
-                <li>
-                  Collaborating and iterating through a university capstone
-                  project
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2>Further details</h2>
-              <p>
-                Before publishing a technical deep dive, document the exact
-                credential model, supported features, team responsibilities, and
-                any security claims against the implemented code.
-              </p>
-              <div class="case-note">
-                Add authentic screenshots, a repository or demonstration link,
-                and specific outcomes before treating this as a finished case
-                study.
-              </div>
-              <div class="case-links">
-                <a href="../index.html#wh-work">← All projects</a
-                ><a
-                  href="https://github.com/Wheather1616"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub profile ↗</a
-                >
-              </div>
+              <p>For compliance workflows such as anti-money laundering and counter-terrorism financing, organisations may need to establish who a person is, whether a company is registered or whether someone is authorised to act on its behalf.</p>
+              <p>Our six-person team worked with industry client Verified Orchestration on a standards-oriented mobile prototype in which issuers provide signed credentials, holders manage them through a wallet and verifiers request evidence when it is needed.</p>
+              <p>The core challenge was joining a usable mobile experience to complex identity protocols, backend orchestration and evolving credential-status requirements.</p>
             </div>
           </div>
         </section>
+
+        <section class="case-workflow" aria-labelledby="wallet-flow-title">
+          <div class="wh-wrap">
+            <span class="case-overline">02 / The product journey</span>
+            <div class="case-section-heading">
+              <h2 id="wallet-flow-title">From issued proof to verified presentation.</h2>
+              <p>A full credential lifecycle within one interface, connecting an issuer, the holder's wallet and a verifier through QR-based interactions.</p>
+            </div>
+            <ol class="booking-pipeline wallet-pipeline" aria-label="Four-stage verifiable credential flow">
+              <li><span>01 / ISSUE</span><strong>Generate an offer</strong><p>An issuer prepares a credential offer and QR code.</p></li>
+              <li><span>02 / STORE</span><strong>Scan and review</strong><p>The wallet receives the offer, previews the credential and stores it through its backend.</p></li>
+              <li><span>03 / PRESENT</span><strong>Choose what to share</strong><p>Matching credentials and eligible claims can be selected for a verifier's request.</p></li>
+              <li><span>04 / VERIFY</span><strong>Validate and respond</strong><p>Signature, status and validity policies contribute to a clear verification result.</p></li>
+            </ol>
+            <div class="case-capabilities-grid">
+              <article class="case-capability"><span class="case-capability-number">01 / STANDARDS</span><h3>Verifiable credentials</h3><p>Used W3C credential models and OpenID-style issuance and presentation flows for five business/compliance-oriented credential schemas.</p></article>
+              <article class="case-capability"><span class="case-capability-number">02 / PRIVACY</span><h3>Selective disclosure</h3><p>Allowed holders to choose which eligible attributes were included in a presentation, without modifying the stored original credential.</p></article>
+              <article class="case-capability"><span class="case-capability-number">03 / TRUST</span><h3>Lifecycle awareness</h3><p>Expired and revoked credentials were surfaced in the interface, with verification policies able to reject credentials no longer valid.</p></article>
+              <article class="case-capability"><span class="case-capability-number">04 / EXPERIENCE</span><h3>Credential management</h3><p>Supported PIN or biometric unlock, credential search and filtering, a details view, history notifications and confirmation before removal.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="wallet-architecture-section" aria-labelledby="wallet-architecture-title">
+          <div class="wh-wrap">
+            <div class="case-screenshot-intro">
+              <div><span class="case-overline">03 / System architecture</span><h2 id="wallet-architecture-title">A mobile interface backed by coordinated identity services.</h2></div>
+              <p>The app was one part of a larger system. The Python API handled request resolution and orchestration, while Walt.id provided dedicated identity services.</p>
+            </div>
+            <div class="wallet-architecture" role="group" aria-label="Simplified architecture of the prototype">
+              <div class="wallet-architecture-top">
+                <div class="wallet-arch-external"><span>External actor</span><strong>Issuer</strong><small>Creates credential offers</small></div>
+                <div class="wallet-arch-external"><span>External actor</span><strong>Verifier</strong><small>Creates presentation requests</small></div>
+              </div>
+              <p class="wallet-arch-exchange">QR-based offers and presentation requests <span aria-hidden="true">↕</span></p>
+              <div class="wallet-arch-layer wallet-arch-app"><span>Mobile experience</span><strong>React Native / Expo</strong><small>Authentication · Scan · Review · Select · Present</small></div>
+              <div class="wallet-arch-down" aria-hidden="true">↓ &nbsp; API requests / responses &nbsp; ↑</div>
+              <div class="wallet-arch-layer wallet-arch-api"><span>Orchestration and application logic</span><strong>Python / FastAPI</strong><small>Offer resolution · Credential matching · Presentation processing</small></div>
+              <div class="wallet-arch-down" aria-hidden="true">↓ &nbsp; Service integration &nbsp; ↑</div>
+              <div class="wallet-arch-services">
+                <div><span>Identity infrastructure</span><strong>Walt.id</strong><small>Wallet API · Issuer API · Verifier API</small></div>
+                <div><span>Status and persistence</span><strong>Supporting services</strong><small>Bitstring status manager · PostgreSQL</small></div>
+              </div>
+              <p class="wallet-arch-footer">Backend services orchestrated with Docker Compose. The final prototype depended on a locally networked backend, and wallet keys were held in the remote Walt.id stack.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-gallery wallet-gallery" aria-labelledby="wallet-gallery-title">
+          <div class="wh-wrap">
+            <div class="case-screenshot-intro">
+              <div><span class="case-overline">04 / Application views</span><h2 id="wallet-gallery-title">The experience behind the protocol.</h2></div>
+              <p>Explore real application states from our team's final report. The gallery shows issuance, credential management, verification and lifecycle controls.</p>
+            </div>
+            <div class="wallet-gallery-grid">
+              <figure class="case-screen-figure"><a class="case-shot-link" href="../assets/mobile-wallet/credential-review.webp" data-lightbox-title="Credential review following issuance" target="_blank" rel="noopener noreferrer"><img src="../assets/mobile-wallet/credential-review.webp" alt="Review and confirmation of a Director ID credential after scanning its QR offer" width="370" height="800" loading="lazy" decoding="async"/><span class="case-shot-zoom" aria-hidden="true">View full size ↗</span></a><figcaption><span>04 / Credential receipt</span><span>Review before saving</span></figcaption></figure>
+              <figure class="case-screen-figure"><a class="case-shot-link" href="../assets/mobile-wallet/credential-filter.webp" data-lightbox-title="Credential search and filtering" target="_blank" rel="noopener noreferrer"><img src="../assets/mobile-wallet/credential-filter.webp" alt="Credential search panel with issuer, status and credential-type filters" width="330" height="715" loading="lazy" decoding="async"/><span class="case-shot-zoom" aria-hidden="true">View full size ↗</span></a><figcaption><span>05 / Find a credential</span><span>Search and status filters</span></figcaption></figure>
+              <figure class="case-screen-figure"><a class="case-shot-link" href="../assets/mobile-wallet/verification-success.webp" data-lightbox-title="Successful credential presentation" target="_blank" rel="noopener noreferrer"><img src="../assets/mobile-wallet/verification-success.webp" alt="Wallet showing successful presentation of Director ID and UBO Attestation credentials" width="386" height="836" loading="lazy" decoding="async"/><span class="case-shot-zoom" aria-hidden="true">View full size ↗</span></a><figcaption><span>06 / Present and verify</span><span>Clear result feedback</span></figcaption></figure>
+              <figure class="case-screen-figure"><a class="case-shot-link" href="../assets/mobile-wallet/revoked-credential.webp" data-lightbox-title="Revoked credential status" target="_blank" rel="noopener noreferrer"><img src="../assets/mobile-wallet/revoked-credential.webp" alt="Wallet displaying a UBO Attestation credential marked as revoked" width="405" height="877" loading="lazy" decoding="async"/><span class="case-shot-zoom" aria-hidden="true">View full size ↗</span></a><figcaption><span>07 / Revocation status</span><span>Invalid credentials made visible</span></figcaption></figure>
+              <figure class="case-screen-figure"><a class="case-shot-link" href="../assets/mobile-wallet/wallet-history.webp" data-lightbox-title="Credential history and notifications" target="_blank" rel="noopener noreferrer"><img src="../assets/mobile-wallet/wallet-history.webp" alt="Requests and notifications showing an action required for a revoked UBO Attestation credential" width="335" height="725" loading="lazy" decoding="async"/><span class="case-shot-zoom" aria-hidden="true">View full size ↗</span></a><figcaption><span>08 / Notification history</span><span>Know what changed</span></figcaption></figure>
+              <figure class="case-screen-figure"><a class="case-shot-link" href="../assets/mobile-wallet/credential-removal.webp" data-lightbox-title="Credential removal confirmation" target="_blank" rel="noopener noreferrer"><img src="../assets/mobile-wallet/credential-removal.webp" alt="Removal confirmation modal requiring the wallet holder to confirm before deleting a credential" width="450" height="780" loading="lazy" decoding="async"/><span class="case-shot-zoom" aria-hidden="true">View full size ↗</span></a><figcaption><span>09 / Controlled removal</span><span>Confirmation before deletion</span></figcaption></figure>
+            </div>
+            <p class="case-gallery-disclaimer">All images are taken from the university project's final report. Issuer and credential examples were created for demonstration and testing. This was not a production identity platform.</p>
+          </div>
+        </section>
+
+        <section class="case-proof wallet-proof" aria-labelledby="wallet-evidence-title">
+          <div class="wh-wrap case-proof-grid">
+            <div><span class="case-overline">05 / Delivered and evaluated</span><div class="case-proof-number">05</div><span class="case-proof-caption">mock credential schemas</span></div>
+            <div>
+              <h2 id="wallet-evidence-title">A complete end-to-end prototype.</h2>
+              <p>Our team demonstrated issuance, storage, presentation of individual or multiple credentials, selective disclosure, credential removal and issuer-driven revocation. The backend test configuration enforced an 80% minimum coverage threshold, and CI included linting, tests and Docker build checks.</p>
+              <p class="case-proof-footnote">The 80% figure is a configured minimum threshold, not a published measured coverage result. Interoperability was exercised with mock services; real third-party integrations and production security were not verified.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-details" aria-labelledby="wallet-decisions-title">
+          <div class="wh-wrap">
+            <span class="case-overline">06 / Behind the build</span>
+            <h2 id="wallet-decisions-title" class="case-details-title">Working with standards means adapting when reality pushes back.</h2>
+            <div class="case-details-grid">
+              <div>
+                <h3>Engineering decisions</h3>
+                <p>Across three sprints the project moved from an ambitious protocol-first design to an integrated, working client-server pipeline.</p>
+                <ul>
+                  <li>Adopted JWT-based verifiable credentials and a pre-authorised issuance flow to integrate with the available Walt.id services.</li>
+                  <li>Constructed presentations from independently signed credentials rather than generating an aggregated derived credential.</li>
+                  <li>Added holder-controlled, presentation-time disclosures and credential matching against verifier requirements.</li>
+                  <li>Applied expiry checks and a W3C Bitstring Status List to surface revocation and constrain presentation.</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Trade-offs and what comes next</h3>
+                <p>The prototype used remote Walt.id credential/key custody rather than the secure on-device design initially envisaged. It also required a local network and online services, with only iOS Expo Go use confirmed in the final evaluation.</p>
+                <p>A production direction would include device-bound cryptographic keys, stronger authentication, cloud-hosted APIs, offline capabilities and external interoperability testing.</p>
+                <div class="case-note">As Scrum Master on a six-person team, I worked within the three-sprint development and client-delivery process. The final report describes team achievements and does not assign particular source-code modules to individual members.</div>
+              </div>
+            </div>
+            <div class="wallet-handover"><span class="case-overline">Client delivery</span><h3>Demonstrated to the client, not just submitted.</h3><p>The team presented the working system to Verified Orchestration at its Wynyard office in April 2026, demonstrating credential creation, storage, presentation, verification and deletion, followed by a technical discussion of integration and disclosure decisions.</p></div>
+            <div class="case-links"><a href="../index.html#wh-work">← All projects</a><a href="https://github.com/Wheather1616" rel="noopener noreferrer" target="_blank">GitHub profile ↗</a></div>
+          </div>
+        </section>
+        <dialog class="case-image-dialog" id="case-image-dialog" aria-labelledby="case-dialog-title">
+          <div class="case-dialog-topbar"><p id="case-dialog-title">Mobile wallet screenshot</p><button class="case-dialog-close" type="button" aria-label="Close screenshot">Close ✕</button></div>
+          <img id="case-dialog-image" src="../assets/mobile-wallet/wallet-home.webp" alt="Digital Identity Wallet application screenshot" width="365" height="790" />
+          <p class="case-dialog-caption">Demonstration credentials from the COMP3900 capstone · Press Esc to close</p>
+        </dialog>
       </main>
+
       <footer class="wh-footer" id="wh-contact">
         <div class="wh-wrap">
           <div class="wh-footer-top">
@@ -141,5 +227,6 @@
         </div>
       </footer>
     </div>
+    <script src="../assets/wallet-gallery.js" defer></script>
   </body>
 </html>
