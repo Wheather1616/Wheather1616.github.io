@@ -27,8 +27,8 @@
     {
       title: "Shining Knights",
       description:
-        "A fourth portfolio project. Add a verified summary, technical stack and real application imagery when ready.",
-      stack: ["Project details", "To be confirmed"],
+        "Desktop management software for a service business, bringing customer records, recurring service defaults and job scheduling into one practical workflow.",
+      stack: ["Python", "PySide6", "SQLite", "Scheduling"],
       url: "projects/shining-knights.html",
     },
   ];

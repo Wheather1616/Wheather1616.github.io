@@ -993,7 +993,8 @@ body {
 
 /* Booking Extension: authentic project preview */
 #wh-portfolio .wh-scene-booking {
-  background: radial-gradient(circle at 90% 5%, #a6dbde, transparent 50%), #d9e9e9;
+  background:
+    radial-gradient(circle at 90% 5%, #a6dbde, transparent 50%), #d9e9e9;
 }
 #wh-portfolio .wh-booking-preview-image {
   display: block;
@@ -1005,7 +1006,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 22px 48px rgba(11, 46, 53, 0.22);
 }
-
 
 /* Digital Identity Wallet: authentic mobile preview in the project selector. */
 #wh-portfolio .wh-wallet-previews {
@@ -1035,5 +1035,24 @@ body {
   transform: translateX(7%) rotate(-5deg) scale(0.92);
 }
 @media (max-width: 600px) {
-  #wh-portfolio .wh-wallet-previews img { height: min(268px, 90%); }
+  #wh-portfolio .wh-wallet-previews img {
+    height: min(268px, 90%);
+  }
+}
+
+/* Shining Knights: authentic desktop preview */
+#wh-portfolio .wh-scene-knights {
+  background:
+    radial-gradient(circle at 88% 8%, #f1d7d0, transparent 45%), #eef5f5;
+}
+#wh-portfolio .wh-knights-preview-image {
+  display: block;
+  width: 100%;
+  max-width: 660px;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  border: 1px solid rgba(82, 5, 10, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 24px 52px rgba(34, 9, 15, 0.18);
 }

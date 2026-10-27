@@ -6,7 +6,7 @@
     <title>Shining Knights | William Heather</title>
     <meta
       name="description"
-      content="A project from my development portfolio. I’m preparing a detailed write-up covering its purpose, architecture and implementation."
+      content="A desktop application for managing customers, recurring services and job scheduling for a cleaning business, built with Python, PySide6 and SQLite."
     />
     <meta name="theme-color" content="#52050A" />
     <link rel="icon" type="image/png" href="../assets/favicon.png" />
@@ -43,69 +43,447 @@
         </div>
       </header>
       <main>
-        <section class="case-hero">
+        <section class="case-hero" aria-labelledby="sk-title">
           <div class="wh-wrap">
             <a href="../index.html#wh-work" class="case-breadcrumb"
               >← Back to selected work</a
             >
             <div class="wh-eyebrow">
-              Selected project · Technical details pending
+              Desktop application · Customer management · Scheduling
             </div>
-            <h1>Shining Knights<span style="color: #258ea6">.</span></h1>
+            <h1 id="sk-title">
+              Shining Knights<span style="color: #258ea6">.</span>
+            </h1>
             <p class="case-lead">
-              A project from my development portfolio. I’m preparing a detailed
-              write-up covering its purpose, architecture and implementation.
+              A desktop management system for a service business, bringing
+              customer records, recurring service defaults and job scheduling
+              into one organised workflow. Shining Knights was redesigned to
+              make day-to-day operations clearer, faster and easier to manage.
             </p>
-            <div class="case-tags"><span>Project write-up pending</span></div>
+            <div class="case-tags" aria-label="Technologies and capabilities">
+              <span>Python</span><span>PySide6 / Qt</span><span>SQLite</span
+              ><span>SQLCipher</span><span>pytest</span><span>Desktop UX</span>
+            </div>
           </div>
         </section>
-        <section class="case-feature">
+
+        <section class="case-screenshot-lead" aria-labelledby="sk-intro-title">
+          <div class="wh-wrap">
+            <div class="case-screenshot-intro">
+              <div>
+                <span class="case-overline">Inside the application</span>
+                <h2 id="sk-intro-title">
+                  A cleaner operational view for a real service workflow.
+                </h2>
+              </div>
+              <p>
+                The redesigned interface gives staff a clear home base for
+                today's jobs, upcoming work, scheduling pressure and quick
+                actions, while keeping customer and job detail only a click
+                away.
+              </p>
+            </div>
+            <figure class="case-screen-figure case-screen-featured">
+              <a
+                class="case-shot-link"
+                href="../assets/shining-knights/dashboard.webp"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-lightbox-title="Shining Knights dashboard"
+                aria-label="Enlarge the Shining Knights dashboard screenshot"
+              >
+                <img
+                  src="../assets/shining-knights/dashboard.webp"
+                  alt="Shining Knights dashboard showing today's jobs, next seven days, needs scheduling, upcoming jobs, job details and quick actions"
+                  width="1600"
+                  height="1038"
+                  decoding="async"
+                  fetchpriority="high"
+                />
+                <span class="case-shot-zoom" aria-hidden="true"
+                  >View full size ↗</span
+                >
+              </a>
+              <figcaption>
+                <span>01 / Dashboard</span
+                ><span
+                  >Operational visibility from the moment the app opens</span
+                >
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="case-feature" aria-labelledby="sk-problem-title">
           <div class="wh-wrap case-feature-grid">
             <div>
-              <span class="case-overline">The challenge</span>
-              <h2>A project worth documenting properly.</h2>
+              <span class="case-overline">01 / The problem</span>
+              <h2 id="sk-problem-title">
+                Customer history, repeat services and job planning need to work
+                together.
+              </h2>
             </div>
-            <p>
-              I’m completing the technical description and project imagery
-              before publishing detailed implementation claims.
+            <div>
+              <p>
+                A service business does not just need a customer list. It needs
+                recurring service settings, saved job defaults, upcoming
+                scheduling visibility and a practical way to move from a
+                customer record to an actual visit on the calendar.
+              </p>
+              <p>
+                Shining Knights was redesigned to make those relationships
+                clearer. The interface connects the core operational entities —
+                customers, services and jobs — so staff can review a client,
+                load their usual service settings and manage work in a more
+                structured way.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-workflow" aria-labelledby="sk-workflow-title">
+          <div class="wh-wrap">
+            <span class="case-overline">02 / How it works</span>
+            <div class="case-section-heading">
+              <h2 id="sk-workflow-title">
+                From customer setup to completed work.
+              </h2>
+              <p>
+                The application supports the full everyday loop: capturing
+                customer information, storing default service settings,
+                scheduling visits and reviewing job history.
+              </p>
+            </div>
+            <ol
+              class="booking-pipeline"
+              aria-label="Four-stage Shining Knights workflow"
+            >
+              <li>
+                <span>01 / CAPTURE</span><strong>Create the customer</strong>
+                <p>
+                  Store contact details, service address and the rhythm for
+                  repeat visits.
+                </p>
+              </li>
+              <li>
+                <span>02 / DEFINE</span><strong>Save service defaults</strong>
+                <p>
+                  Keep the usual nature of job, equipment, charge, hours and
+                  payment method ready for future bookings.
+                </p>
+              </li>
+              <li>
+                <span>03 / SCHEDULE</span
+                ><strong>Create and manage jobs</strong>
+                <p>
+                  Load saved service settings into a job, track status and
+                  review what still needs planning.
+                </p>
+              </li>
+              <li>
+                <span>04 / REVIEW</span><strong>Work from one record</strong>
+                <p>
+                  Move between job lists, customer history and current visit
+                  details without re-entering the same information.
+                </p>
+              </li>
+            </ol>
+            <div class="case-capabilities-grid">
+              <article class="case-capability">
+                <span class="case-capability-number">01 / CUSTOMERS</span>
+                <h3>Structured customer records</h3>
+                <p>
+                  Customer pages combine contact details, service location,
+                  frequency, status and linked history in one interface.
+                </p>
+              </article>
+              <article class="case-capability">
+                <span class="case-capability-number">02 / SERVICES</span>
+                <h3>Reusable defaults</h3>
+                <p>
+                  Usual service settings reduce repeated data entry and help
+                  keep charges, hours, equipment and payment details consistent.
+                </p>
+              </article>
+              <article class="case-capability">
+                <span class="case-capability-number">03 / JOBS</span>
+                <h3>Operational job planning</h3>
+                <p>
+                  The jobs workspace supports searching, filtering, grouped
+                  viewing, scheduling and simple export actions for
+                  administration.
+                </p>
+              </article>
+              <article class="case-capability">
+                <span class="case-capability-number">04 / ENGINEERING</span>
+                <h3>Desktop application foundations</h3>
+                <p>
+                  Built with Python, PySide6 and SQLite, with modular UI work
+                  and testing aimed at preserving function while the interface
+                  evolves.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-gallery" aria-labelledby="sk-gallery-title">
+          <div class="wh-wrap">
+            <div class="case-screenshot-intro">
+              <div>
+                <span class="case-overline">03 / Screens</span>
+                <h2 id="sk-gallery-title">
+                  Key parts of the redesigned experience.
+                </h2>
+              </div>
+              <p>
+                These screens show the customer workspace, add/edit flows and
+                jobs interface. The records shown are fictional demonstration
+                data created for portfolio use.
+              </p>
+            </div>
+            <div class="case-gallery-grid">
+              <figure class="case-screen-figure">
+                <a
+                  class="case-shot-link"
+                  href="../assets/shining-knights/customers.webp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-lightbox-title="Customer workspace"
+                >
+                  <img
+                    src="../assets/shining-knights/customers.webp"
+                    alt="Customer workspace showing search, selected customer summary and linked job history"
+                    width="1600"
+                    height="1040"
+                    decoding="async"
+                  />
+                  <span class="case-shot-zoom" aria-hidden="true"
+                    >Expand ↗</span
+                  >
+                </a>
+                <figcaption>
+                  <span>02 / Customers</span
+                  ><span
+                    >Customer summary, service rhythm and linked history</span
+                  >
+                </figcaption>
+              </figure>
+              <figure class="case-screen-figure">
+                <a
+                  class="case-shot-link"
+                  href="../assets/shining-knights/jobs.webp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-lightbox-title="Jobs workspace"
+                >
+                  <img
+                    src="../assets/shining-knights/jobs.webp"
+                    alt="Jobs workspace showing filters, grouped job overview and a selected job details panel"
+                    width="1600"
+                    height="1038"
+                    decoding="async"
+                  />
+                  <span class="case-shot-zoom" aria-hidden="true"
+                    >Expand ↗</span
+                  >
+                </a>
+                <figcaption>
+                  <span>03 / Jobs</span
+                  ><span
+                    >Grouped scheduling view with filters, actions and detail
+                    panel</span
+                  >
+                </figcaption>
+              </figure>
+              <figure class="case-screen-figure">
+                <a
+                  class="case-shot-link"
+                  href="../assets/shining-knights/add-customer.webp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-lightbox-title="Add customer form"
+                >
+                  <img
+                    src="../assets/shining-knights/add-customer.webp"
+                    alt="Add customer form with structured sections for contact details, service address and service rhythm"
+                    width="1200"
+                    height="1409"
+                    decoding="async"
+                  />
+                  <span class="case-shot-zoom" aria-hidden="true"
+                    >Expand ↗</span
+                  >
+                </a>
+                <figcaption>
+                  <span>04 / Add customer</span
+                  ><span
+                    >Clear sectioning for contact, address and recurrence</span
+                  >
+                </figcaption>
+              </figure>
+              <figure class="case-screen-figure">
+                <a
+                  class="case-shot-link"
+                  href="../assets/shining-knights/add-job.webp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-lightbox-title="Add job form"
+                >
+                  <img
+                    src="../assets/shining-knights/add-job.webp"
+                    alt="Add job form where an existing customer and saved service are loaded before scheduling details are set"
+                    width="1200"
+                    height="1195"
+                    decoding="async"
+                  />
+                  <span class="case-shot-zoom" aria-hidden="true"
+                    >Expand ↗</span
+                  >
+                </a>
+                <figcaption>
+                  <span>05 / Add job</span
+                  ><span>Saved service selection feeds a new job workflow</span>
+                </figcaption>
+              </figure>
+              <figure class="case-screen-figure">
+                <a
+                  class="case-shot-link"
+                  href="../assets/shining-knights/edit-customer-service-rhythm.webp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-lightbox-title="Service rhythm and default service setup"
+                >
+                  <img
+                    src="../assets/shining-knights/edit-customer-service-rhythm.webp"
+                    alt="Edit customer form showing service rhythm, frequency and saved service defaults such as nature of job and equipment"
+                    width="1200"
+                    height="1238"
+                    decoding="async"
+                  />
+                  <span class="case-shot-zoom" aria-hidden="true"
+                    >Expand ↗</span
+                  >
+                </a>
+                <figcaption>
+                  <span>06 / Service rhythm</span
+                  ><span
+                    >Recurring schedule and service-template defaults
+                    together</span
+                  >
+                </figcaption>
+              </figure>
+              <figure class="case-screen-figure">
+                <a
+                  class="case-shot-link"
+                  href="../assets/shining-knights/edit-customer-defaults.webp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-lightbox-title="Saved service defaults and notes"
+                >
+                  <img
+                    src="../assets/shining-knights/edit-customer-defaults.webp"
+                    alt="Edit customer form showing usual service defaults including charge, hours, payment method and an expandable notes section"
+                    width="1200"
+                    height="1236"
+                    decoding="async"
+                  />
+                  <span class="case-shot-zoom" aria-hidden="true"
+                    >Expand ↗</span
+                  >
+                </a>
+                <figcaption>
+                  <span>07 / Usual service defaults</span
+                  ><span
+                    >Reusable operational settings with optional notes</span
+                  >
+                </figcaption>
+              </figure>
+            </div>
+            <p class="case-gallery-disclaimer">
+              All screenshots show fictional names, addresses, dates and records
+              prepared for portfolio presentation.
             </p>
           </div>
         </section>
-        <section class="case-details">
-          <div class="wh-wrap case-details-grid">
-            <div>
-              <h2>To add before sharing</h2>
-              <ul>
-                <li>A concise problem statement and project objective</li>
-                <li>The language, frameworks and architecture used</li>
-                <li>
-                  Screenshots, source-code link and specific contributions
-                </li>
-              </ul>
+
+        <section class="case-details" aria-labelledby="sk-details-title">
+          <div class="wh-wrap">
+            <span class="case-overline">04 / Technical summary</span>
+            <h2 class="case-details-title" id="sk-details-title">
+              A redesign shaped around workflow clarity, while preserving
+              application logic.
+            </h2>
+            <div class="case-details-grid">
+              <div>
+                <p>
+                  The redesign focused on making the application feel more
+                  deliberate and easier to navigate, especially across the Home,
+                  Customers and Jobs workspaces. Information hierarchy was
+                  strengthened, forms were reorganised into clearer sections and
+                  linked data was presented more coherently.
+                </p>
+                <p>
+                  Underneath the visual refresh, the application remains a
+                  practical Python desktop system with a local database,
+                  reusable form logic and support for recurring service
+                  information, job history and day-to-day administration.
+                </p>
+              </div>
+              <div>
+                <p>
+                  The project demonstrates more than a simple CRUD interface. It
+                  shows how a domain-specific workflow can be modelled in
+                  software: one customer may have ongoing service expectations,
+                  those defaults can influence future jobs and scheduling needs
+                  can be surfaced as operational priorities.
+                </p>
+                <div class="case-note">
+                  This portfolio page focuses on the parts of the system visible
+                  in the redesigned interface. Screens shown here use fictional
+                  data and are intended to demonstrate the workflow, not a live
+                  production dataset.
+                </div>
+              </div>
             </div>
-            <div>
-              <h2>Further details</h2>
-              <p>
-                This page intentionally contains no unverified feature or
-                implementation claims. Replace this draft with a complete case
-                study once the project details have been confirmed.
-              </p>
-              <div class="case-note">
-                This is a draft page. The technical details have not been
-                verified and should be completed before promoting it publicly.
-              </div>
-              <div class="case-links">
-                <a href="../index.html#wh-work">← All projects</a
-                ><a
-                  href="https://github.com/Wheather1616"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub profile ↗</a
-                >
-              </div>
+            <div class="case-links">
+              <a href="../index.html#wh-work">← All projects</a>
+              <a
+                href="https://github.com/Wheather1616"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub profile ↗</a
+              >
             </div>
           </div>
         </section>
+
+        <dialog
+          class="case-image-dialog"
+          id="case-image-dialog"
+          aria-labelledby="case-dialog-title"
+        >
+          <div class="case-dialog-topbar">
+            <p id="case-dialog-title">Shining Knights screenshot</p>
+            <button
+              class="case-dialog-close"
+              type="button"
+              aria-label="Close screenshot"
+            >
+              Close ✕
+            </button>
+          </div>
+          <img
+            id="case-dialog-image"
+            src="../assets/shining-knights/dashboard.webp"
+            alt="Shining Knights application screenshot"
+            width="1600"
+            height="1038"
+          />
+          <p class="case-dialog-caption">
+            Fictional demonstration data · Press Esc to close
+          </p>
+        </dialog>
       </main>
       <footer class="wh-footer" id="wh-contact">
         <div class="wh-wrap">
@@ -134,5 +512,6 @@
         </div>
       </footer>
     </div>
+    <script src="../assets/shining-knights-gallery.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,16 @@
+/* Homepage-only Shining Knights preview. Kept separate to avoid changing the shared stylesheet. */
+#wh-portfolio .wh-scene-knights {
+  background: radial-gradient(circle at 88% 8%, #f1d7d0, transparent 45%), #eef5f5;
+}
+
+#wh-portfolio .wh-knights-preview-image {
+  display: block;
+  width: 100%;
+  max-width: 660px;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  border: 1px solid rgba(82, 5, 10, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 24px 52px rgba(34, 9, 15, 0.18);
+}
