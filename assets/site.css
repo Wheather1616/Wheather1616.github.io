@@ -51,6 +51,10 @@ body {
 #wh-portfolio .wh-sitebar {
   background: var(--wh-bordeaux);
   color: var(--wh-cream);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07);
 }
 #wh-portfolio .wh-sitebar .wh-wrap {
   display: flex;
@@ -60,6 +64,9 @@ body {
   gap: 20px;
 }
 #wh-portfolio .wh-mark {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
   font-size: 27px;
   letter-spacing: -0.1em;
   font-weight: 850;
@@ -86,8 +93,8 @@ body {
 #wh-portfolio .wh-toplinks a {
   transition: color 0.2s;
 }
-#wh-portfolio .wh-toplinks a:hover,
-#wh-portfolio .wh-toplinks a:focus-visible {
+#wh-portfolio .wh-toplinks a:where(:hover),
+#wh-portfolio .wh-toplinks a:where(:focus-visible) {
   color: var(--wh-coral);
 }
 #wh-portfolio .wh-availability {
@@ -100,6 +107,20 @@ body {
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
+/* Monochrome SVG arrows have the same appearance on macOS and iOS. */
+#wh-portfolio .wh-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: middle;
+}
+
 #wh-portfolio .wh-dot {
   width: 9px;
   height: 9px;
@@ -229,7 +250,7 @@ body {
     padding 0.22s,
     color 0.22s;
 }
-#wh-portfolio .wh-project-button:last-child {
+#wh-portfolio .wh-project-button[data-project="3"] {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 #wh-portfolio .wh-project-button:before {
@@ -279,8 +300,9 @@ body {
   letter-spacing: 0.02em;
 }
 #wh-portfolio .wh-project-arrow {
-  font-size: 26px;
-  font-weight: 300;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
   text-align: right;
   transition: transform 0.2s;
   color: var(--wh-coral);
@@ -323,10 +345,11 @@ body {
 }
 #wh-portfolio .wh-scene-receipt {
   background:
-    radial-gradient(circle at 92% 10%, #f5c4b6, transparent 45%), #f1dbcf;
+    radial-gradient(circle at 86% 10%, #f5c4b6, transparent 55%), #f1dbcf;
 }
 #wh-portfolio .wh-scene-booking {
-  background: linear-gradient(150deg, #cae7e6 10%, #258ea6 100%);
+  background:
+    radial-gradient(circle at 90% 5%, #a6dbde, transparent 50%), #d9e9e9;
 }
 #wh-portfolio .wh-scene-wallet {
   background:
@@ -334,12 +357,8 @@ body {
     linear-gradient(120deg, #6b2c76, #a846a0);
 }
 #wh-portfolio .wh-scene-knights {
-  background: radial-gradient(
-    circle at 55% 46%,
-    #865e88 0,
-    #39143d 48%,
-    #190e26 100%
-  );
+  background:
+    radial-gradient(circle at 88% 8%, #f1d7d0, transparent 45%), #eef5f5;
 }
 #wh-portfolio .wh-app-window {
   width: 100%;
@@ -394,7 +413,7 @@ body {
   opacity: 0.7;
   font-size: 9px;
 }
-#wh-portfolio .wh-sidebar span:first-of-type {
+#wh-portfolio .wh-sidebar span:where(:first-of-type) {
   color: #fff;
   opacity: 1;
 }
@@ -815,41 +834,73 @@ body {
     width: calc(100% - 32px);
   }
   #wh-portfolio .wh-sitebar .wh-wrap {
-    min-height: 66px;
+    min-height: 62px;
   }
   #wh-portfolio .wh-mark small {
     display: none;
   }
   #wh-portfolio .wh-toplinks {
-    gap: 14px;
-    font-size: 11px;
+    gap: 12px;
+    font-size: 14px;
+    margin-right: 0;
   }
   #wh-portfolio .wh-hero {
-    padding: 71px 0 70px;
+    padding: 43px 0 47px;
+  }
+  #wh-portfolio .wh-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.08em;
   }
   #wh-portfolio .wh-hero h1 {
-    font-size: clamp(46px, 11vw, 72px);
+    font-size: clamp(47px, 12.2vw, 57px);
+    letter-spacing: -0.074em;
   }
   #wh-portfolio .wh-hero-grid {
-    margin-top: 22px;
+    margin-top: 18px;
+    gap: 25px;
+  }
+  #wh-portfolio .wh-hero-aside p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  #wh-portfolio .wh-text-link {
+    margin-top: 17px;
+    font-size: 12px;
   }
   #wh-portfolio .wh-work {
-    padding: 55px 0 60px;
+    padding: 40px 0 53px;
   }
   #wh-portfolio .wh-work-grid {
     margin-top: 28px;
+  }
+  #wh-portfolio .wh-section-top {
+    gap: 8px;
+  }
+  #wh-portfolio .wh-section-label {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+  }
+  #wh-portfolio .wh-section-count {
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
   }
   #wh-portfolio .wh-work-intro {
     margin-bottom: 15px;
   }
   #wh-portfolio .wh-project-button {
-    padding: 17px 7px 17px 1px;
+    padding: 15px 7px 15px 1px;
   }
   #wh-portfolio .wh-project-title {
     font-size: 26px;
   }
+  #wh-portfolio .wh-stage {
+    margin: 12px 0 22px;
+    padding: 0 0 15px;
+  }
   #wh-portfolio .wh-visual {
-    height: 310px;
+    height: 250px;
   }
   #wh-portfolio .wh-visual-scene {
     padding: 14px;
@@ -862,14 +913,38 @@ body {
   }
   #wh-portfolio .wh-preview-bottom {
     flex-direction: column;
-    gap: 13px;
+    gap: 10px;
+    padding-top: 15px;
+    margin-bottom: 6px;
+  }
+  #wh-portfolio .wh-preview-bottom h3 {
+    font-size: 25px;
+  }
+  #wh-portfolio .wh-preview-bottom p {
+    font-size: 13px;
+    line-height: 1.6;
   }
   #wh-portfolio .wh-stack {
     max-width: none;
     justify-content: flex-start;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  #wh-portfolio .wh-stack span {
+    font-size: 12px;
+    padding: 8px 12px;
+    border-color: rgba(255, 255, 255, 0.34);
+  }
+  #wh-portfolio .wh-case-cta {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  #wh-portfolio .wh-note {
+    margin-top: 14px;
+    line-height: 1.55;
   }
   #wh-portfolio .wh-about {
-    padding: 68px 0;
+    padding: 56px 0;
   }
   #wh-portfolio .wh-about-header {
     grid-template-columns: 1fr;
@@ -877,11 +952,19 @@ body {
   }
   #wh-portfolio .wh-pillars {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 22px;
   }
   #wh-portfolio .wh-footer-top {
     flex-direction: column;
     align-items: start;
+    gap: 22px;
+  }
+  #wh-portfolio .wh-footer {
+    padding: 47px 0 27px;
+  }
+  #wh-portfolio .wh-footer p {
+    font-size: 14px;
+    line-height: 1.6;
   }
   #wh-portfolio .wh-footer-base {
     margin-top: 38px;
@@ -897,22 +980,11 @@ body {
 }
 
 /* GitHub Pages: native website header and case-study pages */
-#wh-portfolio .wh-sitebar {
-  position: sticky;
-  top: 0;
-  z-index: 30;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07);
-}
 #wh-portfolio .wh-brand-logo {
   display: block;
   width: 288px;
   max-width: 100%;
   height: auto;
-}
-#wh-portfolio .wh-mark {
-  display: inline-flex;
-  align-items: center;
-  flex: 0 0 auto;
 }
 #wh-portfolio .wh-case-cta {
   display: inline-flex;
@@ -941,6 +1013,7 @@ body {
 }
 #wh-portfolio .wh-contact-actions a {
   display: inline-flex;
+  gap: 9px;
   justify-content: center;
   align-items: center;
   border: 1px solid #52050a;
@@ -966,7 +1039,7 @@ body {
 }
 @media (max-width: 600px) {
   #wh-portfolio .wh-brand-logo {
-    width: 42px;
+    width: 49px;
   }
   #wh-portfolio .wh-sitebar .wh-wrap {
     gap: 10px;
@@ -974,11 +1047,6 @@ body {
 }
 
 /* ReceiptFlow uses an authentic screenshot in the homepage project preview. */
-#wh-portfolio .wh-scene-receipt {
-  background:
-    radial-gradient(circle at 86% 10%, #f5c4b6, transparent 55%), #f1dbcf;
-}
-
 #wh-portfolio .wh-receipt-preview-image {
   display: block;
   width: 100%;
@@ -992,10 +1060,6 @@ body {
 }
 
 /* Booking Extension: authentic project preview */
-#wh-portfolio .wh-scene-booking {
-  background:
-    radial-gradient(circle at 90% 5%, #a6dbde, transparent 50%), #d9e9e9;
-}
 #wh-portfolio .wh-booking-preview-image {
   display: block;
   max-width: 100%;
@@ -1041,10 +1105,6 @@ body {
 }
 
 /* Shining Knights: authentic desktop preview */
-#wh-portfolio .wh-scene-knights {
-  background:
-    radial-gradient(circle at 88% 8%, #f1d7d0, transparent 45%), #eef5f5;
-}
 #wh-portfolio .wh-knights-preview-image {
   display: block;
   width: 100%;

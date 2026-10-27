@@ -38,13 +38,35 @@
   const description = root.querySelector("#wh-active-description");
   const stack = root.querySelector("#wh-active-stack");
   const caseLink = root.querySelector("#wh-case-link");
+  const stage = root.querySelector(".wh-stage");
+  const desktopStageParent = stage?.parentElement;
+  const mobileLayout = window.matchMedia("(max-width: 600px)");
+  let currentProject = 0;
+
+  function positionPreview(index) {
+    if (!stage || !desktopStageParent) return;
+
+    if (mobileLayout.matches) {
+      // Keep the interactive preview immediately below the selected project.
+      if (stage.previousElementSibling !== buttons[index]) {
+        buttons[index].after(stage);
+      }
+    } else if (stage.parentElement !== desktopStageParent) {
+      // Return to the original right-hand column on tablet/desktop.
+      desktopStageParent.append(stage);
+    }
+  }
+
   function selectProject(index) {
     const project = projects[index];
     if (!project) return;
+    currentProject = index;
+    positionPreview(index);
     buttons.forEach((b, i) => {
       const active = i === index;
       b.dataset.active = String(active);
       b.setAttribute("aria-pressed", String(active));
+      b.setAttribute("aria-expanded", String(active && mobileLayout.matches));
     });
     scenes.forEach((s, i) => {
       s.dataset.visible = String(i === index);
@@ -64,9 +86,18 @@
       }),
     );
   }
+  // Initialise the mobile preview location and restore it as the viewport changes.
+  const onLayoutChange = () => selectProject(currentProject);
+  if (typeof mobileLayout.addEventListener === "function") {
+    mobileLayout.addEventListener("change", onLayoutChange);
+  } else {
+    mobileLayout.addListener(onLayoutChange);
+  }
+  selectProject(currentProject);
+
   buttons.forEach((b, i) => {
     b.addEventListener("pointerenter", (e) => {
-      if (e.pointerType === "mouse") selectProject(i);
+      if (e.pointerType === "mouse" && !mobileLayout.matches) selectProject(i);
     });
     b.addEventListener("focus", () => selectProject(i));
     b.addEventListener("click", () => selectProject(i));
